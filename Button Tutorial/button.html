@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>LocalStorage</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <a href="#" class="button gradient">Submit</a>
+      <a href="#" class="button gradient">Add to cart</a>
+    </div>
+    <style>
+      .wrapper {
+        margin: 15%;
+        text-align: center;
+      }
+
+      .button {
+        margin: 3px;
+        text-decoration: none; //disables underline
+        font-family: "Roboto", sans-serif;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        color: #ffffff;
+        box-shadow: 0 8px 6px -4px rgba(0, 0, 0, 0.3);
+        display: inline-block;
+        padding: 16px 20px;
+        border-radius: 50em;
+        transition: all 0.3s ease-out;
+        color: #ffffff;
+        background-image: linear-gradient(0deg, #dd2e7d, #f49422);
+      }
+
+      a:hover {
+        filter: brightness(0.85) contrast(1.2);
+        transform: translateY(-7px);
+      }
+      a:active {
+        letter-spacing: 4px;
+      }
+    </style>
+  </body>
+</html>
