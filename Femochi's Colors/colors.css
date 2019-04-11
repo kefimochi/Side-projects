@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Pangolin");
+@import 'https://fonts.googleapis.com/css?family=Quicksand';
 @import url("https://fonts.googleapis.com/css?family=Dancing Script");
 $header-font: "Dancing Script", sans-serif;;
 $font: "Pangolin", cursive;
@@ -13,8 +14,12 @@ body {
   margin: 0.3em 0.7em;
   // position: relative;
 }
+.nav *:hover {
+  color: $media-color;
+}
 .nav {
   display: none;
+  z-index: 5;
 }
 .show {
   display: block !important;
@@ -24,6 +29,7 @@ body {
   position: fixed;
   width:100%;
   user-select: none;
+  font-family: Quicksand;;
   box-shadow: 0 0 9px rgba(0, 0, 0, .25);
   transition: all 3s ease-out;
   
@@ -44,7 +50,7 @@ body {
       // make this center
       margin: 0.5em;
       z-index: 2;
-      text-transform: uppercase;
+      text-transform: lowercase;
       text-align: center;
 
       li {
@@ -137,26 +143,58 @@ body {
   }
 }
 // -----------Sections--------------------------------
+// ---------------------------------------------------
 section {
   width: 100%;
   height: 120vh;
   background-color: gray;
 }
+// -----------First--------------------------------
 #first-section {
+  z-index: -5;
   background-image: linear-gradient(#ed6ea0 0%, #ec8c69 100%);
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+.transparent {
+  background-color: rgba(255,255,255,0.3);
+  width: 90%;
+  height: 140vh;
+  border-radius: 0em 40em 30em 0em;
+  z-index: -2;
+}
+.transparent-2 {
+  background-color: rgba(255,255,255,0.3);
+  width: 99%;
+  height: 120vh;
+  border-radius: 0em 30em 40em 0em;
+  position: absolute;
+  top: 0%;
+  // z-index: -1;
+}
+// .main {
+//   background-color: white;
+//   width: 90%;
+//   height: 120vh;
+//   border-radius: 0em 30em 40em 0em;
+//   position: absolute;
+//   top: 0em;
+//   z-index: 0;
+// }
+// -----------Second--------------------------------
 #second-section {
   
 }
+// -----------Third--------------------------------
 #third-section {
   
 }
+// -----------Fourth--------------------------------
 #fourth-section {
   
 }
+// -----------Fifth--------------------------------
 #fifth-section {
   background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
   background-size: 100% auto;
