@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Pangolin");
 @import 'https://fonts.googleapis.com/css?family=Quicksand';
 @import url("https://fonts.googleapis.com/css?family=Dancing Script");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,800");
 $header-font: "Dancing Script", sans-serif;;
 $font: "Pangolin", cursive;
 $media-color: rgba(11,72,107, 0.7);
@@ -8,31 +9,48 @@ $media-color: rgba(11,72,107, 0.7);
 body {
   margin: 0;
 }
+.sec1-title {
+  font-size: 3.5em;
+  color: black;
+  // font-family: 'Great Vibes', cursive;
+  position: relative;
+  top: -10em;
+  z-index: 4;
+  user-select: none;
+  font-family: Lato,sans-serif;
+    word-wrap: break-word;
+  margin: 0 1em;
+}
+.sec1-desc {
+  top: -37em;
+  position: relative;
+  z-index: 4;
+  font-size: 1em;
+  font-family: Quicksand;
+}
 // -----------Header--------------------------------
 .title {
   font-family: $header-font;
-  margin: 0.3em 0.7em;
-  // position: relative;
+  margin: 0.3em 1em;
+  font-size: 1.5em;
 }
 .nav *:hover {
   color: $media-color;
 }
 .nav {
   display: none;
-  z-index: 5;
 }
 .show {
   display: block !important;
 }
 .nav-bar {
+  z-index: 5;
   background-color: rgba(255,255,255,0.6);
   position: fixed;
   width:100%;
   user-select: none;
-  font-family: Quicksand;;
+  font-family: Quicksand;
   box-shadow: 0 0 9px rgba(0, 0, 0, .25);
-  transition: all 3s ease-out;
-  
   
      &:before{
       content: "";
@@ -69,7 +87,7 @@ body {
 }
 .toggle-bars {
   position: absolute;
-  top:12px;
+  top:6px;
   right:30px;
   cursor:pointer;
 }
@@ -81,6 +99,7 @@ body {
 }
 // -----------Media Left Bar----------------------------
 .media-links {
+  z-index: 5;
   font-family: $font;
   background-color: rgba(255,255,255,0.6);
   box-shadow: 0 0 9px rgba(0, 0, 0, .25);
@@ -152,20 +171,23 @@ section {
 // -----------First--------------------------------
 #first-section {
   z-index: -5;
-  background-image: linear-gradient(#ed6ea0 0%, #ec8c69 100%);
-  background-size: 100% auto;
+  background-image: url("https://github.com/Kefimochi/Random-stuff/blob/master/Femochi's%20Colors/unsplash.com.photos.twukN12EN7c.jpg?raw=true");
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
+  min-height: 40vh;
+  max-height: 100%;
 }
 .transparent {
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255,255,255,0.4);
   width: 90%;
   height: 140vh;
   border-radius: 0em 40em 30em 0em;
   z-index: -2;
 }
 .transparent-2 {
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255,255,255,0.15);
   width: 99%;
   height: 120vh;
   border-radius: 0em 30em 40em 0em;
@@ -173,18 +195,28 @@ section {
   top: 0%;
   // z-index: -1;
 }
-// .main {
-//   background-color: white;
-//   width: 90%;
-//   height: 120vh;
-//   border-radius: 0em 30em 40em 0em;
-//   position: absolute;
-//   top: 0em;
-//   z-index: 0;
-// }
+.transparent-3 {
+  background-color: rgba(255,255,255,0.2);
+  width: 90%;
+  height: 120vh;
+  border-radius: 0em 30em 40em 0em;
+  position: absolute;
+  top: 0%;
+  // z-index: -1;
+}
+.main-tr {
+  background-color: rgba(255,255,255,0.7);
+  width: 75%;
+  height: 150vh;
+  border-radius: 0em 30em 30em 0em;
+  position: absolute;
+  top: -5em;
+  z-index: 0;
+}
 // -----------Second--------------------------------
 #second-section {
-  
+  z-index: 1;
+  position: absolute;
 }
 // -----------Third--------------------------------
 #third-section {
@@ -222,11 +254,37 @@ section {
   .nav ul {
     display: flex; 
     justify-content: space-between;
-    
   }
   .nav ul li {
     padding:0 0px;
     font-size:16px;
     margin: 0 1em;
   }
+  
+}
+@media screen and (max-width: 550px) {
+  .transparent {
+  width: 100%;
+  height: 140vh;
+  border-radius: 0em 10em 30em 0em;
+  z-index: -2;
+}
+.transparent-2 {
+  width: 100%;
+  height: 120vh;
+  border-radius: 0em 30em 40em 0em;
+}
+.transparent-3 {
+  width: 100%;
+  height: 120vh;
+  border-radius: 0em 30em 40em 0em;
+}
+.main-tr {
+  width: 100%;
+  height: 120vh;
+  border-radius: 0em 25em 25em 0em;
+  position: absolute;
+  top: 0em;
+  z-index: 0;
+}
 }
