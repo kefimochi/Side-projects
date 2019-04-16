@@ -4,29 +4,53 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,800");
 $header-font: "Dancing Script", sans-serif;;
 $font: "Pangolin", cursive;
-$media-color: rgba(11,72,107, 0.7);
+$media-color: rgba(155, 147, 166, 1);
+.nav-bar li.navbar_items a:hover {
+  border-bottom-style: solid;
+  font-weight: bold;
+  border-bottom-color: $media-color;
+    // padding-bottom: 5px;
+}
+
+
+
+.intro-img {
+  background: url("https://raw.githubusercontent.com/Kefimochi/Random-stuff/master/Femochi's%20Colors/51630b57ef0d6.png");
+}
 
 body {
   margin: 0;
 }
-.sec1-title {
-  font-size: 3.5em;
-  color: black;
-  // font-family: 'Great Vibes', cursive;
-  position: relative;
-  top: -10em;
-  z-index: 4;
-  user-select: none;
-  font-family: Lato,sans-serif;
-    word-wrap: break-word;
-  margin: 0 1em;
-}
 .sec1-desc {
-  top: -37em;
+  top: -40em;
   position: relative;
   z-index: 4;
   font-size: 1em;
   font-family: Quicksand;
+}
+.sec1-title {
+  font-size: 5em;
+  color: #D17F89;
+  font-family: $header-font;
+  position: relative;
+  top: -10em;
+  z-index: 3;
+  user-select: none;
+  // font-family: Lato,sans-serif;
+  margin: 0 1em;
+  transform: rotate(-17deg);
+  // text-shadow: 3px 3px rgba(72, 178, 212, 0.4);
+  background-image: -webkit-linear-gradient(#48B2D4, #D17F89, #E6D45A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 10px 0 rgba(255,255,255,1);
+}
+
+.sec1-title:after {
+  background: none;
+  content: attr(data-text);
+  z-index: 3;
+  position: absolute;
 }
 // -----------Header--------------------------------
 .title {
@@ -45,6 +69,7 @@ body {
 }
 .nav-bar {
   z-index: 5;
+  overflow: hidden;
   background-color: rgba(255,255,255,0.6);
   position: fixed;
   width:100%;
@@ -87,14 +112,14 @@ body {
 }
 .toggle-bars {
   position: absolute;
-  top:6px;
+  top:8px;
   right:30px;
   cursor:pointer;
 }
 .toggle-bars .bar {
-  width:35px;
+  width:25px;
   background-color: #000000;
-  margin: 7px 0;
+  margin: 5px 0;
   height:2px;
 }
 // -----------Media Left Bar----------------------------
