@@ -4,23 +4,19 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,800");
 $header-font: "Dancing Script", sans-serif;;
 $font: "Pangolin", cursive;
-$media-color: rgba(155, 147, 166, 1);
-.nav-bar li.navbar_items a:hover {
-  border-bottom-style: solid;
-  font-weight: bold;
-  border-bottom-color: $media-color;
-    // padding-bottom: 5px;
-}
-
-
-
-.intro-img {
-  background: url("https://raw.githubusercontent.com/Kefimochi/Random-stuff/master/Femochi's%20Colors/51630b57ef0d6.png");
-}
+$media-color: #48B2D4;
 
 body {
   margin: 0;
 }
+
+// -----------Undecided/Temp--------------------------
+.icon-space {
+  height: 20em;
+  width: 100%;
+  background-color: white;
+}
+
 .sec1-desc {
   top: -40em;
   position: relative;
@@ -57,6 +53,14 @@ body {
   font-family: $header-font;
   margin: 0.3em 1em;
   font-size: 1.5em;
+  color: black;
+  text-decoration: none;
+}
+.title:hover {
+  background-image: -webkit-linear-gradient(#48B2D4, #D17F89, #E6D45A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder;
 }
 .nav *:hover {
   color: $media-color;
@@ -72,8 +76,9 @@ body {
   overflow: hidden;
   background-color: rgba(255,255,255,0.6);
   position: fixed;
-  width:100%;
+  width: 100%;
   user-select: none;
+  padding: 0.4em 0px;
   font-family: Quicksand;
   box-shadow: 0 0 9px rgba(0, 0, 0, .25);
   
@@ -89,8 +94,6 @@ body {
     }
 
     ul {
-      // position: relative;
-      // make this center
       margin: 0.5em;
       z-index: 2;
       text-transform: lowercase;
@@ -112,15 +115,26 @@ body {
 }
 .toggle-bars {
   position: absolute;
-  top:8px;
+  top: 8px;
   right:30px;
   cursor:pointer;
 }
 .toggle-bars .bar {
-  width:25px;
+  width: 25px;
   background-color: #000000;
   margin: 5px 0;
   height:2px;
+}
+.nav-bar li.navbar_items a:hover {
+  border-bottom-style: solid;
+  font-weight: bold;
+  border-bottom-color: $media-color;
+    // padding-bottom: 5px;
+  margin: 1em 0;
+}
+.nav li a {
+    padding: 8px 6px;
+    text-decoration: none;
 }
 // -----------Media Left Bar----------------------------
 .media-links {
@@ -261,14 +275,18 @@ section {
 
 // -----------Other screen sizes-------------------------
 @media screen and (min-width: 947px){
+  .title {
+    margin: 0.5em 1.2em;
+  }
   .nav-bar {
     display: flex;   
     flex-direction: inherit;
     flex-wrap: wrap; 
+    padding: 0 0px;
     justify-content: space-between;
   }
   .nav {
-    padding:10px 30px;
+    padding: 10px 30px;
   }
     .toggle-bars {
       display: none;
@@ -282,34 +300,34 @@ section {
   }
   .nav ul li {
     padding:0 0px;
-    font-size:16px;
+    font-size: 16px;
     margin: 0 1em;
   }
   
 }
 @media screen and (max-width: 550px) {
   .transparent {
-  width: 100%;
-  height: 140vh;
-  border-radius: 0em 10em 30em 0em;
-  z-index: -2;
-}
-.transparent-2 {
-  width: 100%;
-  height: 120vh;
-  border-radius: 0em 30em 40em 0em;
-}
-.transparent-3 {
-  width: 100%;
-  height: 120vh;
-  border-radius: 0em 30em 40em 0em;
-}
-.main-tr {
-  width: 100%;
-  height: 120vh;
-  border-radius: 0em 25em 25em 0em;
-  position: absolute;
-  top: 0em;
-  z-index: 0;
-}
+    width: 100%;
+    height: 140vh;
+    border-radius: 0em 10em 30em 0em;
+    z-index: -2;
+  }
+  .transparent-2 {
+    width: 100%;
+    height: 120vh;
+    border-radius: 0em 30em 40em 0em;
+  }
+  .transparent-3 {
+    width: 100%;
+    height: 120vh;
+    border-radius: 0em 30em 40em 0em;
+  }
+  // .main-tr {
+  //   width: 100%;
+  //   height: 120vh;
+  //   border-radius: 0em 25em 25em 0em;
+  //   position: absolute;
+  //   top: 0em;
+  //   z-index: 0;
+  // }
 }
