@@ -1,9 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Pangolin");
 @import 'https://fonts.googleapis.com/css?family=Quicksand';
 @import url("https://fonts.googleapis.com/css?family=Dancing Script");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,800");
 $header-font: "Dancing Script", sans-serif;;
-$font: "Pangolin", cursive;
+$font: "Quicksand";
 $media-color: #48B2D4;
 
 body {
@@ -11,18 +10,65 @@ body {
 }
 
 // -----------Undecided/Temp--------------------------
+.fas,
+.icon::before {
+  color: $media-color;
+  font-size: 2.3em;
+  display: block;
+  padding: 0.2em 0.2em;
+}
+.icon-text {
+  font-size: 20px;
+  font-family: $font;
+}
 .icon-space {
   height: 20em;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   background-color: white;
+  // align-items: center;
+  text-align: center;
+  justify-content: center;
 }
-
+.icon {
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  margin: 0.05em 0.8em;
+  margin-bottom: 50px;
+}
+.icon-text-wrap {
+  height: 5em;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: -0.5em;
+  text-align: center;
+  justify-content: center;
+  background-color: $media-color;
+}
+.icons {
+  height: 10em;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+        flex-direction: row;
+  margin: 1em 0 0 0;
+  text-align: center;
+  justify-content: center;
+  background-color: $media-color;
+}
 .sec1-desc {
   top: -40em;
   position: relative;
   z-index: 4;
   font-size: 1em;
-  font-family: Quicksand;
+  font-family: $font;
 }
 .sec1-title {
   font-size: 5em;
@@ -79,7 +125,7 @@ body {
   width: 100%;
   user-select: none;
   padding: 0.4em 0px;
-  font-family: Quicksand;
+  font-family: $font;
   box-shadow: 0 0 9px rgba(0, 0, 0, .25);
   
      &:before{
@@ -140,6 +186,7 @@ body {
 .media-links {
   z-index: 5;
   font-family: $font;
+  font-weight: bold;
   background-color: rgba(255,255,255,0.6);
   box-shadow: 0 0 9px rgba(0, 0, 0, .25);
   top: 70%;
@@ -202,12 +249,14 @@ body {
 }
 // -----------Sections--------------------------------
 // ---------------------------------------------------
+// ---------------------------------------------------
 section {
   width: 100%;
   height: 120vh;
   background-color: gray;
 }
 // -----------First--------------------------------
+// ------------------------------------------------
 #first-section {
   z-index: -5;
   background-image: url("https://github.com/Kefimochi/Random-stuff/blob/master/Femochi's%20Colors/unsplash.com.photos.twukN12EN7c.jpg?raw=true");
@@ -253,19 +302,23 @@ section {
   z-index: 0;
 }
 // -----------Second--------------------------------
+// -------------------------------------------------
 #second-section {
   z-index: 1;
   position: absolute;
 }
 // -----------Third--------------------------------
+// ------------------------------------------------
 #third-section {
   
 }
 // -----------Fourth--------------------------------
+// -------------------------------------------------
 #fourth-section {
   
 }
 // -----------Fifth--------------------------------
+// ------------------------------------------------
 #fifth-section {
   background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
   background-size: 100% auto;
@@ -274,6 +327,7 @@ section {
 }
 
 // -----------Other screen sizes-------------------------
+// ------------------------------------------------------
 @media screen and (min-width: 947px){
   .title {
     margin: 0.5em 1.2em;
@@ -322,12 +376,12 @@ section {
     height: 120vh;
     border-radius: 0em 30em 40em 0em;
   }
-  // .main-tr {
-  //   width: 100%;
-  //   height: 120vh;
-  //   border-radius: 0em 25em 25em 0em;
-  //   position: absolute;
-  //   top: 0em;
-  //   z-index: 0;
-  // }
+  .main-tr {
+    width: 100%;
+    height: 120vh;
+    border-radius: 0em 25em 25em 0em;
+    position: absolute;
+    top: 0em;
+    z-index: 0;
+  }
 }
