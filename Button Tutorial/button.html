@@ -7,9 +7,9 @@
 
   <body>
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700" rel="stylesheet">
-    <div class="wrapper no-select" role="button">
-      <a href="#" class="button">Submit</a>
-      <a href="#" class="button">Add to cart</a>
+    <div class="wrapper">
+      <a href="https://codepen.io/KateEfimova/" class="button" aria-pressed="false" role="button">Submit</a>
+      <a href="https://codepen.io/KateEfimova/" class="button" aria-pressed="false"  role="button">Add to cart</a>
     </div>
     
     <style>
@@ -42,5 +42,11 @@
         letter-spacing: 5px;
       }
     </style>
+    
+    <script>
+       document.querySelectorAll('[role="button"]').forEach(button =>        button.addEventListener('keydown', function(event) {
+         if (event.keyCode  === 32) button.click();
+       }));
+    </script>
   </body>
 </html>
