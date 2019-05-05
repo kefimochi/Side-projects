@@ -30,3 +30,16 @@ function joinString(s, wordDict) {
 }
 
 console.log(joinString(s, wordDict));
+/**************************************************'A' Challenge**********************************************/
+function repeatedString(s, n) {
+    let counter = 0;
+    // if (s === "a") return s.repeat(n);
+    s = s.split(); // now an array
+    // s.forEach(char => {
+    //     if (char === "a") counter++;
+    // });
+    for (let i = 0; i < n; i++) {
+        if (s[i] === "a") counter++;
+    }
+    return counter;
+}
