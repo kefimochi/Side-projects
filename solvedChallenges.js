@@ -28,6 +28,16 @@ function firstDuplicate(a) {
     });
     return bool === true ? newArr[0] : -1;
 }
+
+// OR
+function firstDuplicate(a) {
+  let dictionary = {};
+  for (let i = 0; i < a.length; i++) {
+    if (dictionary[a[i]] !== undefined) return a[i];
+    else dictionary[a[i]] = i;
+  }
+  return -1;
+}
 /**************************************************Match String Challenge**********************************************/
 let wordDict = ["facebook", "face", "boo", "k", "haha", "book"]
 let s = 'facebook';
