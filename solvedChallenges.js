@@ -12,6 +12,22 @@ function main() {
     let result = sockMerchant(7, [0,2,10,2,3,4,4]);
     console.log(result + "\n")
 }
+/**************************************************First Duplicates in an Array Challenge**********************************************/
+function firstDuplicate(a) {
+    let newArr = [];
+    let bool = false;
+    a.findIndex((current, index) => {
+        newArr.forEach((num) => {
+            if (num === current) {
+                bool = true;
+                newArr.unshift(current);
+            };
+        });
+        if (bool === true) return a;
+        newArr.push(current);
+    });
+    return bool === true ? newArr[0] : -1;
+}
 /**************************************************Match String Challenge**********************************************/
 let wordDict = ["facebook", "face", "boo", "k", "haha", "book"]
 let s = 'facebook';
@@ -42,19 +58,4 @@ function repeatedString(s, n) {
         if (s[i] === "a") counter++;
     }
     return counter;
-}
-/**************************************************First Duplicates in an Array Challenge**********************************************/
-function firstDuplicate(a) {
-    let newArr = [];
-    a.forEach((num) => {
-        console.log(num); 
-        newArr.forEach((n) => {
-            if (num===n) {
-                console.log("THIS");
-                return num;
-            };
-        })
-        newArr.push(num);
-    });
-    return -1;
 }
