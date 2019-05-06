@@ -43,3 +43,18 @@ function repeatedString(s, n) {
     }
     return counter;
 }
+/**************************************************First Duplicates in an Array Challenge**********************************************/
+function firstDuplicate(a) {
+    let newArr = [];
+    a.forEach((num) => {
+        console.log(num); 
+        newArr.forEach((n) => {
+            if (num===n) {
+                console.log("THIS");
+                return num;
+            };
+        })
+        newArr.push(num);
+    });
+    return -1;
+}
