@@ -38,8 +38,7 @@ function firstDuplicate(a) {
   }
   return -1;
 }
-/**************************************************Jumping On Clouds Challenge**********************************************/
-/*
+/**************************************************Jumping On Clouds Challenge**********************************************/*
     loop through array
     if (arr[i] = arr[i+1] = arr[i+2] == '0')
         i+=1; //to get to arr[i+2] the next turn
@@ -62,6 +61,23 @@ let result = 0;
     }
     return result;
 }
+/**************************************************Comparing & asynchronous algorithm**********************************************/* 
+function fn(arr1, arr2) { //Use if both arrays are sorted, but dictionary is better is not sorted
+  let i = 0;
+  let j = 0;
+  let result = [];
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] < arr2[j]) i++;
+    else if (arr1[i] > arr2[j]) j++;
+    else {
+      result.push(arr1[i]);
+      i++;
+      j++;
+    }
+  }
+  return result;
+}
+console.log(fn([1,2,3,5,6,7,20], [3,6,7,8,20]));
 /**************************************************Match String Challenge**********************************************/
 let wordDict = ["facebook", "face", "boo", "k", "haha", "book"]
 let s = 'facebook';
