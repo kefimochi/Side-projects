@@ -39,7 +39,7 @@ function firstDuplicate(a) {
   return -1;
 }
 /**************************************************Jumping On Clouds Challenge**********************************************/*
-    loop through array
+    /*    loop through array
     if (arr[i] = arr[i+1] = arr[i+2] == '0')
         i+=1; //to get to arr[i+2] the next turn
         resut++;
