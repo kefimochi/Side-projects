@@ -79,7 +79,7 @@ function joinString(s, wordDict) {
   return arr;
 }
 
-console.log(joinString(s, wordDict));
+console.log(joinString(s, wordDict)); 
 /**************************************************'A' Challenge**********************************************/
 function repeatedString(s, n) {
     let counter = 0;
