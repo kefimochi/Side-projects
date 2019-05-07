@@ -48,22 +48,19 @@ function firstDuplicate(a) {
         result++;
     */
 function jumpingOnClouds(c) {
-    let result = 0;
+let result = 0;
     for (let i = 0; i < c.length; i++) {
         if (c[i] == '0' && c[i + 1] == '0' && c[i + 2] == '0') {
             result++;
             i++;
         }
-        else if (c[i] == '0' && c[i + 1] == '0') {
-            result++;
-        }
+        else if (c[i] == '0' && c[i + 1] == '0') result++;
         else if (c[i] == '0' && c[i + 1] == '1' && c[i + 2] == '0') {
             result++;
             i++;
         }
     }
     return result;
-
 }
 /**************************************************Match String Challenge**********************************************/
 let wordDict = ["facebook", "face", "boo", "k", "haha", "book"]
