@@ -38,7 +38,7 @@ function firstDuplicate(a) {
   }
   return -1;
 }
-/**************************************************Jumping On Clouds Challenge**********************************************/*
+/**************************************************Jumping On Clouds Challenge**********************************************/
     /*    loop through array
     if (arr[i] = arr[i+1] = arr[i+2] == '0')
         i+=1; //to get to arr[i+2] the next turn
@@ -61,7 +61,7 @@ let result = 0;
     }
     return result;
 }
-/**************************************************Comparing & asynchronous algorithm**********************************************/* 
+/**************************************************Comparing & asynchronous algorithm**********************************************/
 function fn(arr1, arr2) { //Use if both arrays are sorted, but dictionary is better is not sorted
   let i = 0;
   let j = 0;
@@ -78,6 +78,18 @@ function fn(arr1, arr2) { //Use if both arrays are sorted, but dictionary is bet
   return result;
 }
 console.log(fn([1,2,3,5,6,7,20], [3,6,7,8,20]));
+/**********************************************Find The Duplicates in an Unsorted Array********************************************/
+function findDuplicates(arr1, arr2) {
+  let result = [];
+  let dictionary = {};
+  arr1.forEach((num, index) => { dictionary[num] = index; }); // 1) push all values from arr1.
+  arr2.forEach((num) => {  // 2) if the value already exists on the dictionary, then push to result
+    if (dictionary[num] !== undefined) result.push(num);
+  });
+  return result;
+}
+
+findDuplicates([1, 2, 3, 5, 6, 7], [3, 6, 7, 8, 20])
 /**************************************************Match String Challenge**********************************************/
 let wordDict = ["facebook", "face", "boo", "k", "haha", "book"]
 let s = 'facebook';
