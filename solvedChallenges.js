@@ -88,7 +88,6 @@ function findDuplicates(arr1, arr2) {
   });
   return result;
 }
-
 findDuplicates([1, 2, 3, 5, 6, 7], [3, 6, 7, 8, 20])
 /**************************************************Match String Challenge**********************************************/
 let wordDict = ["facebook", "face", "boo", "k", "haha", "book"]
@@ -101,7 +100,6 @@ function joinString(s, wordDict) {
   for (let i = 0; i < wordDict.length; i++) {
     if (wordDict[i] === s) arr.push(wordDict[i]);
 }
-  
   console.log(s);
   console.log(wordDict);
   return arr;
