@@ -1,0 +1,45 @@
+[debug] [2019-05-12T17:11:40.050Z] ----------------------------------------------------------------------
+[debug] [2019-05-12T17:11:40.054Z] Command:       C:\Program Files\nodejs\node.exe D:\Coding Projects\SSR React\node_modules\firebase-tools\bin\firebase serve
+[debug] [2019-05-12T17:11:40.055Z] CLI Version:   3.19.3
+[debug] [2019-05-12T17:11:40.055Z] Platform:      win32
+[debug] [2019-05-12T17:11:40.055Z] Node Version:  v12.1.0
+[debug] [2019-05-12T17:11:40.057Z] Time:          Sun May 12 2019 10:11:40 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-05-12T17:11:40.057Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-12T17:11:40.077Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-12T17:11:40.078Z] > authorizing via signed-in user
+[debug] [2019-05-12T17:11:40.081Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-05-12T17:11:40.082Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ {
+  refresh_token: '1/z9GT6CL-4vEtyfoUNViNSdw8PyUzR4-Bd8DiIif_QJ9voauYY_AtsNexCB4W7LqD',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform ' +
+    'https://www.googleapis.com/auth/cloudplatformprojects.readonly ' +
+    'https://www.googleapis.com/auth/firebase openid'
+} 
+ Sun May 12 2019 10:11:40 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-05-12T17:11:40.291Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-12T17:11:40.309Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/react-server-side-render-82474  
+  
+ Sun May 12 2019 10:11:40 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-05-12T17:11:40.905Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-12T17:11:40.907Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/react-server-side-render-82474/tokens  
+  
+ Sun May 12 2019 10:11:40 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-05-12T17:11:41.234Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-12T17:11:41.236Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/react-server-side-render-82474  
+  
+ Sun May 12 2019 10:11:41 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-05-12T17:11:41.518Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\Coding Projects\SSR React'...
+[info] 
+[debug] [2019-05-12T17:11:41.524Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/519713614237/clients/_:getWebAppConfig  
+  
+ Sun May 12 2019 10:11:41 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-05-12T17:11:42.133Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
