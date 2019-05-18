@@ -22530,7 +22530,9 @@ function App(props) {
     return _react2.default.createElement(
       "li",
       { key: i },
-      fact.next
+      " ",
+      fact.text,
+      " "
     );
   });
   return _react2.default.createElement(
