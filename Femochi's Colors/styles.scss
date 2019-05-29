@@ -214,6 +214,7 @@ section {
   background-size: cover;
   min-height: 40vh;
   max-height: 100%;
+  height: 115vh;
 }
 .transparent {
   background-color: rgba(255, 255, 255, 0.4);
@@ -382,28 +383,25 @@ section {
 // -----------Second--------------------------------
 // -------------------------------------------------
 #second-section {
-  // transform-origin: top right;
-  //   transform: skewY(-2deg);
-  // top: -4em;
   z-index: 1;
   position: relative;
   height: 200vh;
   background-color: $light-yellow;
   background-color: #fcf0ed;
-  // background-attachment: fixed;
-  // background-size: 600% 130%;
-  // background-repeat: no-repeat;
-  // background-attachment: fixed;
 }
 .icon-space {
-  height: 26em;
+  -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
+  // -webkit-clip-path: polygon(0 16%, 100% 0, 100% 100%, 0% 100%);
+  height: 35em;
   width: 100%;
   display: flex;
+  position: relative;
+  top: -5.5em;
   flex-wrap: wrap;
   flex-direction: row;
   background-color: $light-yellow;
   background-image: linear-gradient(
-    180deg,
+    60deg,
     rgba(255, 0, 0, 0),
     rgba(255, 0, 0, 0.32)
   );
@@ -464,7 +462,6 @@ section {
 }
 .about-title {
   font-family: $font;
-  margin: 2em 0em;
   font-size: 1.8em;
   margin-block-end: 0.4em;
   text-align: center;
@@ -535,7 +532,7 @@ section {
 @media screen and (max-width: 1005px) {
   // -----------Second--------------------------------
   .icon-space {
-    height: 45em;
+    height: 50em;
   }
   #second-section {
     height: 200vh;
@@ -623,7 +620,7 @@ section {
   }
   // -----------Second--------------------------------
   .icon-space {
-    height: 67em;
+    height: 85em;
     flex-direction: column;
   }
   #second-section {
