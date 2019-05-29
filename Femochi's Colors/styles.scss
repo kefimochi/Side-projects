@@ -318,17 +318,29 @@ section {
 // -------------------------------------------------
 #second-section {
   // transform-origin: top right;
+<<<<<<< HEAD:Femochi's Colors/styles.scss
   //   transform: skewY(-2deg);
   // top: -4em;
+=======
+  //   transform: skewY(-4deg);
+  // top: -2.5em;
+>>>>>>> a2f3668151044e0ae346d1d3a4aa52459f512cc2:Femochi's Colors/colors.css
   z-index: 1;
   position: relative;
   height: 200vh;
   background-color: $light-yellow;
   background-color: #FCF0ED;
+<<<<<<< HEAD:Femochi's Colors/styles.scss
   // background-attachment: fixed;
   // background-size: 600% 130%;
   // background-repeat: no-repeat;
   // background-attachment: fixed;
+=======
+  background-attachment: fixed;
+  background-size: 500% 130%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+>>>>>>> a2f3668151044e0ae346d1d3a4aa52459f512cc2:Femochi's Colors/colors.css
 }
 .icon-space {
   height: 26em;
