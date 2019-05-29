@@ -1,26 +1,22 @@
-const navBar = document.querySelector('.nav-bar');
-const navLinks = document.querySelectorAll('a');
-navBar.addEventListener('mouseleave', toggleNavigation);
+const navBar = document.querySelector(".nav-bar");
+const navLinks = document.querySelectorAll("a");
+navBar.addEventListener("mouseleave", toggleNavigation);
 
 navLinks.forEach(link => {
   link.addEventListener("click", toggleNavigation);
   console.log(link);
 });
 
-$(".toggle-bars").click(function(){
-    $(".nav").toggleClass("show");
+$(".toggle-bars").click(function() {
+  $(".nav").toggleClass("show");
 });
 
 function toggleNavigation(e) {
   $(".nav").toggleClass("show");
-  if($(".nav").hasClass("show")) {
+  if ($(".nav").hasClass("show")) {
     $(".nav").removeClass("show");
   }
 }
-
-
-
-
 
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
@@ -34,32 +30,36 @@ let charIndex = 0; // character index
 
 function type() {
   if (charIndex < textArray[textArrayIndex].length) {
-    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    if (!cursorSpan.classList.contains("typing"))
+      cursorSpan.classList.add("typing");
     typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
     charIndex++;
     setTimeout(type, typingSpeed);
-  } 
-  else {
+  } else {
     cursorSpan.classList.remove("typing");
-  	setTimeout(erase, newTextDelay);
+    setTimeout(erase, newTextDelay);
   }
 }
 
 function erase() {
-	if (charIndex > 0) {
-    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+  if (charIndex > 0) {
+    if (!cursorSpan.classList.contains("typing"))
+      cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(
+      0,
+      charIndex - 1
+    );
     charIndex--;
     setTimeout(erase, erasingSpeed);
-  } 
-  else {
+  } else {
     cursorSpan.classList.remove("typing");
     textArrayIndex++;
-    if(textArrayIndex>=textArray.length) textArrayIndex=0;
+    if (textArrayIndex >= textArray.length) textArrayIndex = 0;
     setTimeout(type, typingSpeed + 1100);
   }
 }
 
-document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+document.addEventListener("DOMContentLoaded", function() {
+  // On DOM Load initiate the effect
   setTimeout(type, newTextDelay + 250);
 });

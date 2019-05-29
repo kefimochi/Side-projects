@@ -15,80 +15,6 @@ body {
 }
 
 // -----------Undecided/Temp--------------------------
-.cursor-text-container {
-  font-weight: 400;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  align-items: center;
-  top: -53em;
-  font-family: $font;
-}
-.cursor-text-container p {
-  font-size: 2rem;
-  padding: 0.5rem;
-  letter-spacing: 0.1rem;
-  text-align: center;
-  overflow: hidden;
-}
-.cursor-text-container p span.typed-text {
-  font-weight: bold;
-  font-size: 1.4em;
-  font-family: $header-font;
-  background-image: linear-gradient(to right top, #ffffff, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1, #9599d6, #6ba7dc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.cursor-text-container p span.cursor {
-  display: inline-block;
-  background-color: #000;
-  margin-left: 0.1rem;
-  width: 2px;
-  animation: blink 1s infinite;
-}
-.cursor-text-container p span.cursor.typing {
-  animation: none;
-}
-@keyframes blink {
-  0%  { background-color: #000; }
-  49% { background-color: #ccc; }
-  50% { background-color: transparent; }
-  99% { background-color: transparent; }
-  100%  { background-color: #000; }
-}
-.sec1-title-shadow {
-  margin: 0 0 0 0.5em;
-  font-size: 7em;
-  font-family: $header-font;
-  position: relative;
-  top: -7.66em;
-  z-index: 1;
-  user-select: none;
- background-image: linear-gradient(to left top, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1, #9599d6, #6ba7dc, #48b2d4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 9px 10px rgba(0, 0, 0, 0.325);
-  display: flex;
-  justify-content: center;
-  position: relative;
-  align-items: center;
-}
-.sec1-title {
-  margin: 0 0 0 0.5em;
-  font-size: 7em;
-  font-family: $header-font;
-  position: relative;
-  top: -6.5em;
-  z-index: 3;
-  user-select: none;
- background-image: linear-gradient(to right top, #ffffff, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1, #9599d6, #6ba7dc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  align-items: center;
-}
 // -----------Header--------------------------------
 .title {
   font-family: $header-font;
@@ -163,12 +89,16 @@ body {
   right: 30px;
   cursor: pointer;
   display: none;
+  
+  
 }
 .toggle-bars .bar {
   width: 27px;
   background-color: #000000;
   margin: 5px 0;
   height: 2px;
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease;
 }
 .nav-bar li.nav-link a:hover {
   border-bottom-style: solid;
@@ -264,7 +194,7 @@ section {
 // ------------------------------------------------
 #first-section {
   z-index: -5;
-  background-image: url("https://github.com/Kefimochi/Random-stuff/blob/master/Femochi's%20Colors/unsplash.com.photos.twukN12EN7c.jpg?raw=true");
+  background-image: url("https://i.ibb.co/G0ghjBw/unsplash-com-photos-twuk-N12-EN7c.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -274,10 +204,13 @@ section {
 }
 .transparent {
   background-color: rgba(255,255,255,0.4);
-  width: 90%;
-  height: 140vh;
-  border-radius: 0em 40em 30em 0em;
+  width: 100%;
+  height: 135vh;
+  border-radius: 0 0 30em 30em;
   z-index: -2;
+  // transform: skew(30deg, 30deg);
+  // transform: rotate(30deg);
+  // top: -30em;
 }
 .transparent-2 {
   background-color: rgba(255,255,255,0.15);
@@ -299,29 +232,103 @@ section {
 }
 .main-tr {
   background-color: rgba(255,255,255,0.7);
-  width: 75%;
-  height: 150vh;
-  border-radius: 0em 30em 30em 0em;
+  width: 100%;
+  height: 80vh;
+  border-radius: 0 0 40em 40em;
   position: absolute;
-  top: -5em;
+  top: -1.5em;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
   z-index: 0;
+}
+.sec1-title-shadow {
+  margin: 0 0 0 0.5em;
+  font-size: 9em;
+  font-family: $header-font;
+  top: -6.34em;
+  z-index: 1;
+  user-select: none;
+ background-image: linear-gradient(to left top, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1, #9599d6, #6ba7dc, #48b2d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 9px 10px rgba(0, 0, 0, 0.325);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+.sec1-title {
+  margin: 0 0 0 0.5em;
+  font-size: 9em;
+  font-family: $header-font;
+  top: -5.2em;
+  z-index: 3;
+  user-select: none;
+ background-image: linear-gradient(to right top, #ffffff, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1, #9599d6, #6ba7dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+.cursor-text-container {
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  top: -58em;
+  font-family: $font;
+}
+.cursor-text-container p {
+  font-size: 2rem;
+  padding: 0.5rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+}
+.cursor-text-container p span.typed-text {
+  font-weight: bold;
+  font-size: 1.4em;
+  font-family: $header-font;
+  background-image: linear-gradient(to right top, #ffffff, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1, #9599d6, #6ba7dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.cursor-text-container p span.cursor {
+  display: inline-block;
+  background-color: #000;
+  margin-left: 0.1rem;
+  width: 2px;
+  animation: blink 1s infinite;
+}
+.cursor-text-container p span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0%  { background-color: #000; }
+  49% { background-color: #ccc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #000; }
 }
 // -----------Second--------------------------------
 // -------------------------------------------------
 #second-section {
+  // transform-origin: top right;
+  //   transform: skewY(-2deg);
+  // top: -4em;
   z-index: 1;
   position: relative;
-  height: 160vh;
+  height: 200vh;
   background-color: $light-yellow;
-  // background-image: url("https://github.com/Kefimochi/Random-stuff/blob/master/Femochi's%20Colors/interlaced.png?raw=true");
   background-color: #FCF0ED;
-  background-attachment: fixed;
-  background-image: url("https://github.com/Kefimochi/Random-stuff/blob/master/Femochi's%20Colors/unsplash.com.photos.twukN12EN7c.jpg?raw=true");
-  // opacity: 0.4;
-  background-size: 500% 130%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  // background-size: cover;
+  // background-attachment: fixed;
+  // background-size: 600% 130%;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
 }
 .icon-space {
   height: 26em;
@@ -330,7 +337,7 @@ section {
   flex-wrap: wrap;
   flex-direction: row;
   background-color: $light-yellow;
-  background-image: linear-gradient(180deg, rgba(255,0,0,0), rgba(255,0,0,0.20));
+  background-image: linear-gradient(180deg, rgba(255,0,0,0), rgba(255,0,0,0.32));
   align-items: center;
   justify-content: center;
 }
@@ -377,7 +384,7 @@ section {
 }
 .about-title {
   font-family: $font;
-  margin: 2em 7em;
+  margin: 2em 0em;
   font-size: 1.8em;
   margin-block-end: 0.4em;
   text-align: center;
@@ -391,7 +398,6 @@ section {
 }
 .about-container {
   display: inline;
-  background-color: white;
   height: 100vh;
   width: auto;
 }
@@ -467,10 +473,10 @@ section {
 // -----------First--------------------------------  
   .sec1-title-shadow {
     margin: 0 0 0 0.2em;
-    font-size: 7em;
+    font-size: 5em;
     font-family: $header-font;
     position: relative;
-    top: -8.35em;
+    top: -11.35em;
     z-index: 1;
     user-select: none;
    background-image: linear-gradient(to left top, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1, #9599d6, #6ba7dc, #48b2d4);
@@ -480,15 +486,18 @@ section {
   }
   .sec1-title {
     margin: 0 0 0 0.2em;
-    font-size: 7em;
+    font-size: 5em;
     font-family: $header-font;
     position: relative;
-    top: -6em;
+    top: -9em;
     z-index: 3;
     user-select: none;
    background-image: linear-gradient(to right top, #ffffff, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1, #9599d6, #6ba7dc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  .cursor-text-container {
+  top: -56em;
   }
 // -----------Second--------------------------------
   .icon-space {
