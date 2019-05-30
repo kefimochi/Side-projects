@@ -201,6 +201,7 @@ body {
 section {
   width: 100%;
   height: 100vh;
+  // opacity: 0.5;
   background-color: gray;
 }
 // -----------First--------------------------------
@@ -379,6 +380,56 @@ section {
   100% {
     background-color: #000;
   }
+}
+.button-wrapper {
+  margin: 15%;
+  text-align: center;
+}
+
+.button-wrapper .fa-palette:before {
+  font-size: 0.35em;
+  margin: 0.3em;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.button {
+  z-index: 10;
+  position: relative;
+  text-decoration: none;
+  top: -65em;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1em;
+  letter-spacing: 0.3em;
+  box-shadow: 0 8px 20px 0 rgba(0, 40, 120, 0.35);
+  padding: 16px 20px;
+  border-radius: 50em;
+  transition: all 0.5s ease-out;
+  color: #ffffff;
+  background-image: linear-gradient(
+    160deg,
+    #e6d45a,
+    #edc059,
+    #efac5e,
+    #ea9a65,
+    #e18b6c,
+    #e1837f,
+    #d97f91,
+    #cb7fa2,
+    #b78bc1
+  );
+  height: 40px;
+  width: 20em;
+}
+
+.button a:hover {
+  filter: brightness(0.85) contrast(1.1);
+  box-shadow: 0 5px 20px 0 rgba(0, 40, 120, 0.3);
+}
+.button a:active {
+  letter-spacing: 5px;
 }
 // -----------Second--------------------------------
 // -------------------------------------------------
