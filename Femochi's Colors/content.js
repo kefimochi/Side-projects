@@ -21,7 +21,7 @@ function toggleNavigation(e) {
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["hard", "fun", "a journey", "LIFE"];
+const textArray = ["fun", "hard", "a journey", "LIFE!"];
 const typingSpeed = 200;
 const erasingSpeed = 100;
 const newTextDelay = 2000; // Delay between current and next text
@@ -59,7 +59,7 @@ function erase() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
   // On DOM Load initiate the effect
   setTimeout(type, newTextDelay + 250);
 });

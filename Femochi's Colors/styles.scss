@@ -385,13 +385,12 @@ section {
 #second-section {
   z-index: 1;
   position: relative;
-  height: 200vh;
+  height: 150vh;
   background-color: $light-yellow;
   background-color: #fcf0ed;
 }
 .icon-space {
   -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
-  // -webkit-clip-path: polygon(0 16%, 100% 0, 100% 100%, 0% 100%);
   height: 35em;
   width: 100%;
   display: flex;
@@ -487,15 +486,12 @@ section {
   float: right;
   margin: 2em;
 }
-.about-container {
-  display: inline;
-  height: 100vh;
-  width: auto;
-}
-.about-text-container {
-  margin: 0 3em;
-}
-.about-container h1:nth-child(2) {
+// .about-container {
+//   display: inline;
+//   height: 100vh;
+//   width: auto;
+// }
+.about-container h1 {
   display: flex;
   text-indent: 50px;
   float: left;
@@ -506,20 +502,22 @@ section {
   font-size: 0.9em;
   line-height: 2.5;
 }
+.about-image {
+}
 // -----------Third--------------------------------
 // ------------------------------------------------
 #third-section {
-  height: 120vh;
+  height: 110vh;
 }
 // -----------Fourth--------------------------------
 // -------------------------------------------------
 #fourth-section {
-  height: 120vh;
+  height: 110vh;
 }
 // -----------Fifth--------------------------------
 // ------------------------------------------------
 #fifth-section {
-  height: 120vh;
+  height: 110vh;
   background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -620,7 +618,8 @@ section {
   }
   // -----------Second--------------------------------
   .icon-space {
-    height: 85em;
+    -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+    height: 78em;
     flex-direction: column;
   }
   #second-section {

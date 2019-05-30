@@ -344,7 +344,7 @@ section {
 #second-section {
   z-index: 1;
   position: relative;
-  height: 200vh;
+  height: 150vh;
   background-color: #eae09c;
   background-color: #fcf0ed; }
 
@@ -450,15 +450,7 @@ section {
   float: right;
   margin: 2em; }
 
-.about-container {
-  display: inline;
-  height: 100vh;
-  width: auto; }
-
-.about-text-container {
-  margin: 0 3em; }
-
-.about-container h1:nth-child(2) {
+.about-container h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -471,13 +463,13 @@ section {
   line-height: 2.5; }
 
 #third-section {
-  height: 120vh; }
+  height: 110vh; }
 
 #fourth-section {
-  height: 120vh; }
+  height: 110vh; }
 
 #fifth-section {
-  height: 120vh;
+  height: 110vh;
   background-image: -webkit-gradient(linear, left top, right top, from(#ed6ea0), to(#ec8c69));
   background-image: -webkit-linear-gradient(left, #ed6ea0 0%, #ec8c69 100%);
   background-image: -o-linear-gradient(left, #ed6ea0 0%, #ec8c69 100%);
@@ -544,7 +536,8 @@ section {
   .cursor-text-container {
     top: -56em; }
   .icon-space {
-    height: 85em;
+    -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+    height: 78em;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
