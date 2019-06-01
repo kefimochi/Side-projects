@@ -31,6 +31,7 @@ body {
   padding: 10px 10px; }
 
 .nav-bar {
+  scroll-behavior: smooth;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,7 +178,6 @@ section {
 #first-section {
   z-index: -5;
   background-image: url("background-first.jpg");
-  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -188,7 +188,7 @@ section {
 .transparent {
   background-color: rgba(255, 255, 255, 0.4);
   width: 100%;
-  height: 135vh;
+  height: 115vh;
   border-radius: 0 0 30em 30em;
   z-index: -2; }
 
@@ -209,7 +209,7 @@ section {
   top: 0%; }
 
 .main-tr {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.5);
   width: 100%;
   height: 80vh;
   border-radius: 0 0 40em 40em;
@@ -221,7 +221,6 @@ section {
   margin: 0 0 0 0.5em;
   font-size: 9em;
   font-family: "Dancing Script", sans-serif;
-  top: -6.34em;
   z-index: 1;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -240,7 +239,7 @@ section {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
+  position: absolute;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
@@ -249,7 +248,6 @@ section {
   margin: 0 0 0 0.5em;
   font-size: 9em;
   font-family: "Dancing Script", sans-serif;
-  top: -5.2em;
   z-index: 3;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -267,7 +265,7 @@ section {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
+  position: absolute;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
@@ -284,7 +282,6 @@ section {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  top: -58em;
   font-family: "Quicksand"; }
 
 .cursor-text-container p {
@@ -342,56 +339,42 @@ section {
     background-color: #000; } }
 
 .button-wrapper {
-  margin: 15%;
   text-align: center; }
 
 .button-wrapper .fa-palette:before {
   font-size: 0.35em;
-  margin: 0.3em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center; }
+  margin: 0.3em; }
 
 .button {
   z-index: 10;
   position: relative;
   text-decoration: none;
-  top: -65em;
   font-family: "Quicksand", sans-serif;
   font-size: 1em;
   letter-spacing: 0.3em;
-  -webkit-box-shadow: 0 8px 20px 0 rgba(0, 40, 120, 0.35);
-  box-shadow: 0 8px 20px 0 rgba(0, 40, 120, 0.35);
+  -webkit-box-shadow: 0 8px 20px 0 rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 20px 0 rgba(255, 255, 255, 0.95);
   padding: 16px 20px;
   border-radius: 50em;
-  -webkit-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   color: #ffffff;
   background-image: -webkit-linear-gradient(290deg, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1);
   background-image: -o-linear-gradient(290deg, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1);
-  background-image: linear-gradient(160deg, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1);
-  height: 40px;
-  width: 20em; }
+  background-image: linear-gradient(160deg, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1); }
 
-.button a:hover {
-  -webkit-filter: brightness(0.85) contrast(1.1);
-  filter: brightness(0.85) contrast(1.1);
-  -webkit-box-shadow: 0 5px 20px 0 rgba(0, 40, 120, 0.3);
-  box-shadow: 0 5px 20px 0 rgba(0, 40, 120, 0.3); }
+.button:hover {
+  -webkit-filter: brightness(0.89) contrast(1.3);
+  filter: brightness(0.89) contrast(1.3); }
 
-.button a:active {
+.button:active {
   letter-spacing: 5px; }
 
 #second-section {
   z-index: 1;
   position: relative;
-  height: 150vh;
+  height: 180vh;
   background-color: #eae09c;
   background-color: #fcf0ed; }
 
@@ -492,10 +475,6 @@ section {
   background-image: linear-gradient(to right top, #ffffff, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1, #9599d6, #6ba7dc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
-
-.about-image {
-  float: right;
-  margin: 2em; }
 
 .about-container h1 {
   display: -webkit-box;

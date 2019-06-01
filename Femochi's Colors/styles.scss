@@ -54,6 +54,7 @@ body {
   padding: 10px 10px;
 }
 .nav-bar {
+  scroll-behavior: smooth;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -209,7 +210,7 @@ section {
 #first-section {
   z-index: -5;
   background-image: url("background-first.jpg");
-  background-size: 100% 100%;
+  // background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -220,7 +221,7 @@ section {
 .transparent {
   background-color: rgba(255, 255, 255, 0.4);
   width: 100%;
-  height: 135vh;
+  height: 115vh;
   border-radius: 0 0 30em 30em;
   z-index: -2;
   // transform: skew(30deg, 30deg);
@@ -246,7 +247,7 @@ section {
   // z-index: -1;
 }
 .main-tr {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.5);
   width: 100%;
   height: 80vh;
   border-radius: 0 0 40em 40em;
@@ -261,7 +262,7 @@ section {
   margin: 0 0 0 0.5em;
   font-size: 9em;
   font-family: $header-font;
-  top: -6.34em;
+  // top: -5.95em;
   z-index: 1;
   user-select: none;
   background-image: linear-gradient(
@@ -284,14 +285,14 @@ section {
   text-shadow: 0 9px 10px rgba(0, 0, 0, 0.325);
   display: flex;
   justify-content: center;
-  position: relative;
+  position: absolute;
   align-items: center;
 }
 .sec1-title {
   margin: 0 0 0 0.5em;
   font-size: 9em;
   font-family: $header-font;
-  top: -5.2em;
+  // top: -4.8em;
   z-index: 3;
   user-select: none;
   background-image: linear-gradient(
@@ -313,7 +314,7 @@ section {
   -webkit-text-fill-color: transparent;
   display: flex;
   justify-content: center;
-  position: relative;
+  position: absolute;
   align-items: center;
 }
 .cursor-text-container {
@@ -322,7 +323,7 @@ section {
   justify-content: center;
   position: relative;
   align-items: center;
-  top: -58em;
+  // top: -56em;
   font-family: $font;
 }
 .cursor-text-container p {
@@ -382,31 +383,27 @@ section {
   }
 }
 .button-wrapper {
-  margin: 15%;
+  // margin: 15%;
   text-align: center;
 }
 
 .button-wrapper .fa-palette:before {
   font-size: 0.35em;
   margin: 0.3em;
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  align-content: center;
 }
 
 .button {
   z-index: 10;
   position: relative;
   text-decoration: none;
-  top: -65em;
+  // top: -70em;
   font-family: "Quicksand", sans-serif;
   font-size: 1em;
   letter-spacing: 0.3em;
-  box-shadow: 0 8px 20px 0 rgba(0, 40, 120, 0.35);
+  box-shadow: 0 8px 20px 0 rgba(255, 255, 255, 0.95);
   padding: 16px 20px;
   border-radius: 50em;
-  transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
   color: #ffffff;
   background-image: linear-gradient(
     160deg,
@@ -420,15 +417,13 @@ section {
     #cb7fa2,
     #b78bc1
   );
-  height: 40px;
-  width: 20em;
 }
 
-.button a:hover {
-  filter: brightness(0.85) contrast(1.1);
-  box-shadow: 0 5px 20px 0 rgba(0, 40, 120, 0.3);
+.button:hover {
+  filter: brightness(0.89) contrast(1.3);
+  // box-shadow: 0 5px 20px 0 rgba(0, 40, 120, 0.3);
 }
-.button a:active {
+.button:active {
   letter-spacing: 5px;
 }
 // -----------Second--------------------------------
@@ -436,7 +431,7 @@ section {
 #second-section {
   z-index: 1;
   position: relative;
-  height: 150vh;
+  height: 180vh;
   background-color: $light-yellow;
   background-color: #fcf0ed;
 }
@@ -534,8 +529,6 @@ section {
   -webkit-text-fill-color: transparent;
 }
 .about-image {
-  float: right;
-  margin: 2em;
 }
 // .about-container {
 //   display: inline;
