@@ -185,7 +185,7 @@ section {
   background-size: cover;
   min-height: 40vh;
   height: 105vh;
-  margin: 3.5em 1em 0 1em; }
+  margin: 2.5em 1em 0 1em; }
 
 .transparent {
   background-color: rgba(255, 255, 255, 0.4);
@@ -219,44 +219,32 @@ section {
   z-index: 0; }
 
 .sec1-title {
+  padding: 1em 0 0 0;
   margin: 0;
   font-size: 9em;
   font-family: "Dancing Script", sans-serif;
-  top: 200px;
-  z-index: 3;
+  z-index: 5;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-image: -webkit-gradient(linear, left bottom, right top, from(#ffffff), color-stop(#e6d45a), color-stop(#edc059), color-stop(#efac5e), color-stop(#ea9a65), color-stop(#e18b6c), color-stop(#e1837f), color-stop(#d97f91), color-stop(#cb7fa2), color-stop(#b78bc1), color-stop(#9599d6), to(#6ba7dc));
-  background-image: -webkit-linear-gradient(left bottom, #ffffff, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1, #9599d6, #6ba7dc);
-  background-image: -o-linear-gradient(left bottom, #ffffff, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1, #9599d6, #6ba7dc);
-  background-image: linear-gradient(to right top, #ffffff, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1, #9599d6, #6ba7dc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center; }
+  position: relative;
+  text-align: center;
+  text-shadow: 1px 0px 1px #e6d45a, 0px 1px 1px #edc059, 2px 1px 1px #efac5e, 1px 2px 1px #ea9a65, 3px 2px 1px #e18b6c, 2px 3px 1px #e1837f, 4px 3px 1px #d97f91, 3px 4px 1px #d97f91, 5px 4px 1px #b78bc1, 4px 5px 1px #e18b6c, 6px 5px 1px #9599d6, 5px 6px 1px #e1837f, 7px 6px 1px #b78bc1;
+  color: white; }
 
 .sec1-title-shadow {
-  margin: 0 0 0 0.5em;
   font-size: 9em;
   font-family: "Dancing Script", sans-serif;
-  top: 1em;
+  top: -1.8em;
   z-index: 1;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: absolute;
+  position: relative;
   color: white;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
+  text-align: center; }
 
 .cursor-text-container {
   font-weight: 400;
@@ -270,7 +258,7 @@ section {
   -ms-flex-align: center;
   align-items: center;
   font-family: "Quicksand";
-  color: white; }
+  color: #fff6bc; }
 
 .cursor-text-container p {
   font-size: 2rem;
@@ -292,7 +280,7 @@ section {
 
 .cursor-text-container p span.cursor {
   display: inline-block;
-  background-color: #000;
+  background-color: #fff;
   margin-left: 0.1rem;
   width: 2px;
   -webkit-animation: blink 1s infinite;
@@ -304,7 +292,7 @@ section {
 
 @-webkit-keyframes blink {
   0% {
-    background-color: #000; }
+    background-color: #fff; }
   49% {
     background-color: #ccc; }
   50% {
@@ -312,11 +300,11 @@ section {
   99% {
     background-color: transparent; }
   100% {
-    background-color: #000; } }
+    background-color: #fff; } }
 
 @keyframes blink {
   0% {
-    background-color: #000; }
+    background-color: #fff; }
   49% {
     background-color: #ccc; }
   50% {
@@ -324,29 +312,30 @@ section {
   99% {
     background-color: transparent; }
   100% {
-    background-color: #000; } }
+    background-color: #fff; } }
 
 .button-wrapper {
   text-align: center; }
 
 .button-wrapper .fa-palette:before {
   font-size: 0.35em;
-  margin: 0.3em; }
+  margin: 0.3em;
+  color: #fff9d6; }
 
 .button {
   z-index: 10;
   text-decoration: none;
   font-family: "Quicksand", sans-serif;
   font-size: 1em;
-  letter-spacing: 0.3em;
-  -webkit-box-shadow: 0 8px 10px 0 rgba(255, 255, 255, 0.55);
-  box-shadow: 0 8px 10px 0 rgba(255, 255, 255, 0.55);
-  padding: 16px 20px;
+  letter-spacing: 0.5em;
+  -webkit-box-shadow: 2px 2px 0px 0 rgba(255, 255, 255, 0.55);
+  box-shadow: 2px 2px 0px 0 rgba(255, 255, 255, 0.55);
+  padding: 16px 30px;
   border-radius: 50em;
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  color: #ffffff;
+  color: #fff9d6;
   background-image: -webkit-linear-gradient(290deg, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1);
   background-image: -o-linear-gradient(290deg, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1);
   background-image: linear-gradient(160deg, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1); }
