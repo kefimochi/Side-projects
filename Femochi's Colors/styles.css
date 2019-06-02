@@ -35,6 +35,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  top: 0;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-pack: justify;
@@ -178,12 +179,13 @@ section {
 #first-section {
   z-index: -5;
   background-image: url("background-first.jpg");
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   min-height: 40vh;
-  max-height: 100%;
-  height: 115vh; }
+  height: 105vh;
+  margin: 3.5em 1em 0 1em; }
 
 .transparent {
   background-color: rgba(255, 255, 255, 0.4);
@@ -213,41 +215,14 @@ section {
   width: 100%;
   height: 80vh;
   border-radius: 0 0 40em 40em;
-  position: absolute;
   top: -1.5em;
   z-index: 0; }
 
-.sec1-title-shadow {
-  margin: 0 0 0 0.5em;
-  font-size: 9em;
-  font-family: "Dancing Script", sans-serif;
-  z-index: 1;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-image: -webkit-gradient(linear, right bottom, left top, from(#e6d45a), color-stop(#edc059), color-stop(#efac5e), color-stop(#ea9a65), color-stop(#e18b6c), color-stop(#e1837f), color-stop(#d97f91), color-stop(#cb7fa2), color-stop(#b78bc1), color-stop(#9599d6), color-stop(#6ba7dc), to(#48b2d4));
-  background-image: -webkit-linear-gradient(right bottom, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1, #9599d6, #6ba7dc, #48b2d4);
-  background-image: -o-linear-gradient(right bottom, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1, #9599d6, #6ba7dc, #48b2d4);
-  background-image: linear-gradient(to left top, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1, #9599d6, #6ba7dc, #48b2d4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 9px 10px rgba(0, 0, 0, 0.325);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: absolute;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
 .sec1-title {
-  margin: 0 0 0 0.5em;
+  margin: 0;
   font-size: 9em;
   font-family: "Dancing Script", sans-serif;
+  top: 200px;
   z-index: 3;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -259,6 +234,18 @@ section {
   background-image: linear-gradient(to right top, #ffffff, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1, #9599d6, #6ba7dc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center; }
+
+.sec1-title-shadow {
+  margin: 0 0 0 0.5em;
+  font-size: 9em;
+  font-family: "Dancing Script", sans-serif;
+  top: 1em;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -266,6 +253,7 @@ section {
   -ms-flex-pack: center;
   justify-content: center;
   position: absolute;
+  color: white;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
@@ -278,11 +266,11 @@ section {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: "Quicksand"; }
+  font-family: "Quicksand";
+  color: white; }
 
 .cursor-text-container p {
   font-size: 2rem;
@@ -347,13 +335,12 @@ section {
 
 .button {
   z-index: 10;
-  position: relative;
   text-decoration: none;
   font-family: "Quicksand", sans-serif;
   font-size: 1em;
   letter-spacing: 0.3em;
-  -webkit-box-shadow: 0 8px 20px 0 rgba(255, 255, 255, 0.95);
-  box-shadow: 0 8px 20px 0 rgba(255, 255, 255, 0.95);
+  -webkit-box-shadow: 0 8px 10px 0 rgba(255, 255, 255, 0.55);
+  box-shadow: 0 8px 10px 0 rgba(255, 255, 255, 0.55);
   padding: 16px 20px;
   border-radius: 50em;
   -webkit-transition: all 0.3s ease-out;
@@ -386,7 +373,7 @@ section {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  top: -5.5em;
+  top: -8.5em;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-orient: horizontal;

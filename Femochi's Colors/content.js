@@ -93,7 +93,8 @@ function smoothScroll(target, duration) {
 
 let navLink = document.querySelectorAll(".nav-link");
 navLink.forEach(link =>
-  link.addEventListener("click", () => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
     if (link.textContent === "Home") smoothScroll("#first-section", 2500);
     else if (link.textContent === "About")
       smoothScroll("#second-section", 1500);
