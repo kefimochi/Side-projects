@@ -185,7 +185,7 @@ section {
   background-size: cover;
   min-height: 40vh;
   height: 105vh;
-  margin: 2.5em 1em 0 1em; }
+  margin: 2.2em 0.6em 0 0.6em; }
 
 .transparent {
   background-color: rgba(255, 255, 255, 0.4);
@@ -335,7 +335,7 @@ section {
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  color: #fff9d6;
+  color: white;
   background-image: -webkit-linear-gradient(290deg, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1);
   background-image: -o-linear-gradient(290deg, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1);
   background-image: linear-gradient(160deg, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1); }
