@@ -48,22 +48,17 @@ h1:first-child {
   }
 }
 
-.fa-copy:before {
-  padding: 0.25em;
+.fa-copy {
+  margin: 0 1em;
+  padding: 0.75em;
   line-height: 20px;
-  border-radius: 0.4em;
+  border-radius: 0.5em;
   background-color: transparent;
   color: var(--primary);
   border: 1px solid var(--primary);
   transition: 0.2s ease;
 }
 
-.fa-copy:after {
-  background-color: var(--primary);
-  color: var(--random-color);
-  transition: 0.2s ease;
-}
-
-.random-color {
+#random-color {
   text-decoration: underline;
 }

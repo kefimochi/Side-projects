@@ -1,3 +1,5 @@
+let colorSelected = "#0000FF";
+
 function randomColor() {
   let color = getRandomColor();
   if (color !== "yellow") {
@@ -8,6 +10,7 @@ function randomColor() {
   }
   refactorText(color);
   document.documentElement.style.setProperty(`--random-color`, color);
+  colorSelected = color;
 }
 
 function getRandomColor() {
@@ -15,8 +18,27 @@ function getRandomColor() {
 }
 
 function refactorText(text) {
-  let element = document.querySelector(".random-color");
+  let element = document.querySelector("#random-color");
   element.textContent = text;
+}
+
+function copyColor() {
+  console.log(colorSelected);
+  // var copyText = document.getElementById("random-color");
+  // copyText.select();
+  // document.execCommand("copy");
+  // alert("Copied the text: " + copyText.value);
+
+  let copyColor = document.querySelector("#random-color");
+  copyColor[0].focus();
+  copyColor[0].select();
+  try {
+    let successful = document.execCommand("copy");
+    let msg = successful ? "successful" : "unsuccessful";
+    console.log("Copying text command was " + msg);
+  } catch (err) {
+    console.log("Oops, unable to copy");
+  }
 }
 
 // let shuffle = array => {
