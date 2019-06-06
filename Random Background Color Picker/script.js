@@ -11,19 +11,21 @@ function randomColor() {
   shuffle(colors);
   if (colors[0] !== "yellow") {
     document.documentElement.style.setProperty(`--random-color`, colors[0]);
-    addColorText("Current color used: " + colors[0]);
+    refactorText("Current color used: " + colors[0]);
   } else {
     document.documentElement.style.setProperty(`--random-color`, "black");
-    addColorText("Current color was not accessible, defaulted to black!");
+    refactorText("Current color was not accessible, defaulted to black!");
   }
 }
 
-function addColorText(text) {
-  let h = document.createElement("H1");
-  let t = document.createTextNode(text);
-  console.log("T", t);
-  h.appendChild(t);
-  document.body.appendChild(h);
+function refactorText(text) {
+  //   let h = document.createElement("H1");
+  //   let t = document.createTextNode(text);
+  //   console.log("T", t);
+  //   h.appendChild(t);
+  //   document.body.appendChild(h);
+  let element = document.querySelector(".sub-text");
+  element.textContent = text;
 }
 
 let shuffle = array => {

@@ -12,8 +12,13 @@ body {
   color: white;
 }
 
-h1 {
-  margin: 7em 0 1.4em 0;
+h1:first-child {
+  margin: 7em 0 1em 0;
+}
+
+.sub-text {
+  font-size: 1.2em;
+  margin: 0.5em 0 1em 0;
 }
 
 .btn {
