@@ -328,8 +328,8 @@ section {
   font-family: "Quicksand", sans-serif;
   font-size: 1em;
   letter-spacing: 0.5em;
-  -webkit-box-shadow: 2px 2px 0px 0 rgba(255, 255, 255, 0.55);
-  box-shadow: 2px 2px 0px 0 rgba(255, 255, 255, 0.55);
+  -webkit-box-shadow: -2px 2px 0px 0 rgba(255, 255, 255, 0.55);
+  box-shadow: -2px 2px 0px 0 rgba(255, 255, 255, 0.55);
   padding: 16px 30px;
   border-radius: 50em;
   -webkit-transition: all 0.3s ease-out;

@@ -1,0 +1,41 @@
+@import "https://fonts.googleapis.com/css?family=Quicksand";
+:root {
+  --random-color: blue; }
+
+body {
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Quicksand;
+  background-color: var(--random-color);
+  color: white; }
+
+h1 {
+  margin: 7em 0 1.4em 0; }
+
+.btn {
+  display: inline-block;
+  border-radius: 2px;
+  border: none;
+  height: 45px;
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+.sm {
+  width: 20em; }
+
+.ghost {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  -webkit-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease; }
+  .ghost:hover {
+    background-color: white;
+    color: var(--random-color);
+    -webkit-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease; }
