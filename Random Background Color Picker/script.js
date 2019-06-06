@@ -9,7 +9,21 @@ function randomColor() {
     "black"
   ];
   shuffle(colors);
-  document.documentElement.style.setProperty(`--random-color`, colors[0]);
+  if (colors[0] !== "yellow") {
+    document.documentElement.style.setProperty(`--random-color`, colors[0]);
+    addColorText("Current color used: ", colors[0]);
+  } else {
+    document.documentElement.style.setProperty(`--random-color`, "black");
+    addColorText("Current color was not accessible, defaulted to black!");
+  }
+}
+
+function addColorText(text) {
+  let h = document.createElement("H1");
+  let t = document.createTextNode(text);
+  console.log("T", t);
+  h.appendChild(t);
+  document.body.appendChild(h);
 }
 
 let shuffle = array => {
