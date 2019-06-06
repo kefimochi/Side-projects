@@ -19,11 +19,6 @@ function randomColor() {
 }
 
 function refactorText(text) {
-  //   let h = document.createElement("H1");
-  //   let t = document.createTextNode(text);
-  //   console.log("T", t);
-  //   h.appendChild(t);
-  //   document.body.appendChild(h);
   let element = document.querySelector(".sub-text");
   element.textContent = text;
 }
