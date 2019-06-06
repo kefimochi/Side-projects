@@ -12,9 +12,11 @@ function randomColor() {
   if (colors[0] !== "yellow") {
     document.documentElement.style.setProperty(`--random-color`, colors[0]);
     refactorText("Current color used: " + colors[0]);
+    document.documentElement.style.setProperty(`--primary`, 'white');
   } else {
-    document.documentElement.style.setProperty(`--random-color`, "black");
+    document.documentElement.style.setProperty(`--random-color`, colors[0]);
     refactorText("Current color was not accessible, defaulted to black!");
+    document.documentElement.style.setProperty(`--primary`, 'black');
   }
 }
 
