@@ -1,5 +1,6 @@
 @import "https://fonts.googleapis.com/css?family=Quicksand";
 :root {
+  --primary: white;
   --random-color: blue; }
 
 body {
@@ -9,7 +10,7 @@ body {
   align-items: center;
   font-family: Quicksand;
   background-color: var(--random-color);
-  color: white; }
+  color: var(--primary); }
 
 h1:first-child {
   margin: 7em 0 1em 0; }
@@ -32,14 +33,35 @@ h1:first-child {
 
 .ghost {
   background-color: transparent;
-  color: white;
-  border: 1px solid white;
+  color: var(--primary);
+  border: 1px solid var(--primary);
   -webkit-transition: 0.2s ease;
   -o-transition: 0.2s ease;
   transition: 0.2s ease; }
   .ghost:hover {
-    background-color: white;
+    background-color: var(--primary);
     color: var(--random-color);
     -webkit-transition: 0.2s ease;
     -o-transition: 0.2s ease;
     transition: 0.2s ease; }
+
+.fa-copy:before {
+  padding: 0.25em;
+  line-height: 20px;
+  border-radius: 0.4em;
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  -webkit-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease; }
+
+.fa-copy:after {
+  background-color: var(--primary);
+  color: var(--random-color);
+  -webkit-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease; }
+
+.random-color {
+  text-decoration: underline; }
