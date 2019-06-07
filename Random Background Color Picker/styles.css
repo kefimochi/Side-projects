@@ -46,16 +46,10 @@ h1:first-child {
     transition: 0.2s ease; }
 
 .fa-copy {
-  margin: 0 1em;
+  margin: 0 0.5em;
   padding: 0.75em;
   line-height: 20px;
-  border-radius: 0.5em;
-  background-color: transparent;
-  color: var(--primary);
-  border: 1px solid var(--primary);
-  -webkit-transition: 0.2s ease;
-  -o-transition: 0.2s ease;
-  transition: 0.2s ease; }
+  border-radius: 0.55em; }
 
 #random-color {
   text-decoration: underline; }

@@ -49,14 +49,10 @@ h1:first-child {
 }
 
 .fa-copy {
-  margin: 0 1em;
+  margin: 0 0.5em;
   padding: 0.75em;
   line-height: 20px;
-  border-radius: 0.5em;
-  background-color: transparent;
-  color: var(--primary);
-  border: 1px solid var(--primary);
-  transition: 0.2s ease;
+  border-radius: 0.55em;
 }
 
 #random-color {
