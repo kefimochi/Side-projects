@@ -1,20 +1,15 @@
 let colorSelected = "#0000FF";
 
 function randomColor() {
-  let color = getRandomColor();
-  if (color !== "#1f37d") {
+  colorSelected = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  if (colorSelected !== "#1f37d") {
     //some function checking for accessibility
     document.documentElement.style.setProperty(`--primary`, "white");
   } else {
     document.documentElement.style.setProperty(`--primary`, "black");
   }
-  refactorText(color);
-  document.documentElement.style.setProperty(`--random-color`, color);
-  colorSelected = color;
-}
-
-function getRandomColor() {
-  return "#" + Math.floor(Math.random() * 16777215).toString(16);
+  refactorText(colorSelected);
+  document.documentElement.style.setProperty(`--random-color`, colorSelected);
 }
 
 function refactorText(text) {
@@ -38,3 +33,6 @@ function copyColor() {
 
 let button = document.querySelector(".btn");
 button.addEventListener("click", randomColor);
+
+let copy = document.querySelector(".copy");
+copy.addEventListener("click", copyColor);
