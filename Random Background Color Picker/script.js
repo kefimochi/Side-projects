@@ -20,8 +20,9 @@ function refactorText(text) {
 function copyColor() {
   console.log(colorSelected);
   let copyColor = document.querySelector("#random-color");
-  copyColor[0].focus();
-  copyColor[0].select();
+  console.log(copyColor);
+  copyColor.focus();
+  copyColor.select();
   try {
     let successful = document.execCommand("copy");
     let msg = successful ? "successful" : "unsuccessful";
@@ -33,6 +34,3 @@ function copyColor() {
 
 let button = document.querySelector(".btn");
 button.addEventListener("click", randomColor);
-
-let copy = document.querySelector(".copy");
-copy.addEventListener("click", copyColor);
