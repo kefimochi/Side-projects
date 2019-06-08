@@ -17,29 +17,12 @@ function refactorText(text) {
   element.textContent = text;
 }
 
-function copyColor() {
-  console.log(colorSelected);
-  let copyColor = document.querySelector("#random-color");
-  console.log(copyColor);
-  copyColor.focus();
-  copyColor.select();
-  try {
-    let successful = document.execCommand("copy");
-    let msg = successful ? "successful" : "unsuccessful";
-    console.log("Copying text command was " + msg);
-  } catch (err) {
-    console.log("Oops, unable to copy");
-  }
-}
-
-let button = document.querySelector(".btn");
-button.addEventListener("click", randomColor);
-
 function CopyToClipboard(containerid) {
   var range = document.createRange();
   range.selectNode(document.getElementById(containerid));
-  window.getSelection().removeAllRanges(); // clear current selection
+  window.getSelection().removeAllRanges(); // clears current selection
   window.getSelection().addRange(range); // to select text
   document.execCommand("copy");
-  window.getSelection().removeAllRanges(); // to deselect
+  window.getSelection().removeAllRanges(); // to deselect text
+  alert("Color was successfully copied!");
 }
