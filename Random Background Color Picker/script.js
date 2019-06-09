@@ -8,16 +8,12 @@ function randomColor() {
   if (
     getContrastYIQ(generatedColor) === "black" &&
     getContrastYIQ(generatedColor2) === "black"
-  ) {
-    //some function checking for accessibility
+  )
     document.documentElement.style.setProperty(`--primary`, "black");
-  } else {
-    document.documentElement.style.setProperty(`--primary`, "white");
-  }
+  else document.documentElement.style.setProperty(`--primary`, "white");
 
   generatedColor = "#" + generatedColor;
   generatedColor2 = "#" + generatedColor2;
-
   refactorText(generatedColor, generatedColor2);
 
   document.documentElement.style.setProperty(`--random-color`, generatedColor);
