@@ -4,6 +4,7 @@ let generatedColor2;
 function randomColor() {
   generatedColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
   generatedColor2 = "#" + Math.floor(Math.random() * 16777215).toString(16);
+
   if (generatedColor !== "#1f37d") {
     //some function checking for accessibility
     document.documentElement.style.setProperty(`--primary`, "white");
@@ -11,6 +12,7 @@ function randomColor() {
     document.documentElement.style.setProperty(`--primary`, "black");
   }
   refactorText(generatedColor, generatedColor2);
+
   document.documentElement.style.setProperty(`--random-color`, generatedColor);
   document.documentElement.style.setProperty(
     `--random-color-2`,
@@ -28,7 +30,7 @@ function refactorText(text, text2) {
 function copyColors() {
   var el = document.createElement("textarea");
   // Set value (string to be copied)
-  el.value = `linear-gradient(to top right, ${generatedColor},
+  el.value = `background-image: linear-gradient(to top right, ${generatedColor},
     ${generatedColor2});`;
 
   // Set non-editable to avoid focus and move outside of view
