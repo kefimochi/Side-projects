@@ -10,7 +10,7 @@ function randomColor() {
   } else {
     document.documentElement.style.setProperty(`--primary`, "black");
   }
-  refactorText(generatedColor);
+  refactorText(generatedColor, generatedColor2);
   document.documentElement.style.setProperty(`--random-color`, generatedColor);
   document.documentElement.style.setProperty(
     `--random-color-2`,
@@ -18,9 +18,11 @@ function randomColor() {
   );
 }
 
-function refactorText(text) {
+function refactorText(text, text2) {
   let element = document.querySelector("#random-color");
   element.textContent = text;
+  let element2 = document.querySelector("#random-color-2");
+  element.textContent = text2;
 }
 
 function CopyToClipboard(containerid) {
@@ -31,4 +33,21 @@ function CopyToClipboard(containerid) {
   document.execCommand("copy");
   window.getSelection().removeAllRanges(); // to deselect text
   alert("Color was successfully copied!");
+}
+
+function copy() {
+  var el = document.createElement("textarea");
+  // Set value (string to be copied)
+  el.value = `linear-gradient(to top right, ${generatedColor},
+    ${generatedColor2});`;
+  // Set non-editable to avoid focus and move outside of view
+  el.setAttribute("readonly", "");
+  el.style = { position: "absolute", left: "-9999px" };
+  document.body.appendChild(el);
+  // Select text inside element
+  el.select();
+  // Copy text to clipboard
+  document.execCommand("copy");
+  // Remove temporary element
+  document.body.removeChild(el);
 }
