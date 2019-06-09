@@ -399,19 +399,17 @@ section {
 
 .button {
   z-index: 10;
-  // position: relative;
   text-decoration: none;
-  // top: -70em;
   font-family: "Quicksand", sans-serif;
   font-size: 1em;
   letter-spacing: 0.5em;
-  // box-shadow: -2px 2px 0px 0 rgba(255, 255, 255, 0.55);
   padding: 16px 7em;
   border-radius: 50em;
+  font-weight: bold;
   transition: all 0.3s ease-out;
   color: #e1837f;
   background-color: white;
-  box-shadow: 0 5px 20px 0 rgba(0, 40, 120, 0.3);
+  box-shadow: 0 5px 20px 0 rgba(0, 40, 120, 0.2);
 }
 
 .button:hover {
@@ -524,25 +522,35 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.about-image {
-}
 // .about-container {
 //   display: inline;
 //   height: 100vh;
 //   width: auto;
 // }
-.about-container h1 {
+.about-container {
+  display: inline-block;
   display: flex;
-  text-indent: 50px;
-  float: left;
-  width: 40em;
-  // text-align: center;
-  font-family: $font;
-  margin: 2em 4em;
-  font-size: 0.9em;
-  line-height: 2.5;
+  flex-direction: row;
 }
-.about-image {
+.about-container h1 span {
+  display: flex;
+  flex-direction: row;
+  text-indent: 50px;
+  max-width: 40em;
+  text-align: center;
+  font-family: $font;
+  display: inline-block;
+  margin: 2em 4em;
+  font-size: 0.7em;
+  line-height: 2.2;
+}
+.about-container img {
+  display: flex;
+  // position: absolute;
+  // display: inline-block;
+
+  height: 25em;
+  width: 25em;
 }
 // -----------Third--------------------------------
 // ------------------------------------------------
