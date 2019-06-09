@@ -1,15 +1,21 @@
-let colorSelected = "#0000FF";
+let generatedColor = "#2d1dba";
+let generatedColor2 = "#f772ff";
 
 function randomColor() {
-  colorSelected = "#" + Math.floor(Math.random() * 16777215).toString(16);
-  if (colorSelected !== "#1f37d") {
+  generatedColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  generatedColor2 = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  if (generatedColor !== "#1f37d") {
     //some function checking for accessibility
     document.documentElement.style.setProperty(`--primary`, "white");
   } else {
     document.documentElement.style.setProperty(`--primary`, "black");
   }
-  refactorText(colorSelected);
-  document.documentElement.style.setProperty(`--random-color`, colorSelected);
+  refactorText(generatedColor);
+  document.documentElement.style.setProperty(`--random-color`, generatedColor);
+  document.documentElement.style.setProperty(
+    `--random-color-2`,
+    generatedColor2
+  );
 }
 
 function refactorText(text) {
