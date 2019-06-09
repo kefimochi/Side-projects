@@ -1,5 +1,5 @@
-let generatedColor;
-let generatedColor2;
+let generatedColor = "#2d1dba";
+let generatedColor2 = "#f772ff";
 
 function randomColor() {
   generatedColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
@@ -40,4 +40,5 @@ function copyColors() {
   el.select();
   document.execCommand("copy");
   document.body.removeChild(el);
+  alert("Color was successfully copied!");
 }
