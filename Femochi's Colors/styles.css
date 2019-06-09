@@ -315,12 +315,8 @@ section {
     background-color: #fff; } }
 
 .button-wrapper {
+  margin: 2em 0;
   text-align: center; }
-
-.button-wrapper .fa-palette:before {
-  font-size: 0.35em;
-  margin: 0.3em;
-  color: #fff9d6; }
 
 .button {
   z-index: 10;
@@ -328,21 +324,20 @@ section {
   font-family: "Quicksand", sans-serif;
   font-size: 1em;
   letter-spacing: 0.5em;
-  -webkit-box-shadow: -2px 2px 0px 0 rgba(255, 255, 255, 0.55);
-  box-shadow: -2px 2px 0px 0 rgba(255, 255, 255, 0.55);
-  padding: 16px 30px;
+  padding: 16px 7em;
   border-radius: 50em;
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  color: white;
-  background-image: -webkit-linear-gradient(290deg, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1);
-  background-image: -o-linear-gradient(290deg, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1);
-  background-image: linear-gradient(160deg, #e6d45a, #edc059, #efac5e, #ea9a65, #e18b6c, #e1837f, #d97f91, #cb7fa2, #b78bc1); }
+  color: #e1837f;
+  background-color: white;
+  -webkit-box-shadow: 0 5px 20px 0 rgba(0, 40, 120, 0.3);
+  box-shadow: 0 5px 20px 0 rgba(0, 40, 120, 0.3); }
 
 .button:hover {
   -webkit-filter: brightness(0.89) contrast(1.3);
-  filter: brightness(0.89) contrast(1.3); }
+  filter: brightness(0.89) contrast(1.3);
+  background-color: #ccc; }
 
 .button:active {
   letter-spacing: 5px; }
