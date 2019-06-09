@@ -10,7 +10,7 @@ body {
   -ms-flex-align: center;
   align-items: center;
   font-family: Quicksand;
-  background-color: var(--random-color);
+  background-color: #f772ff;
   background-image: -webkit-gradient(linear, left bottom, right top, from(var(--random-color-2)), to(var(--random-color)));
   background-image: -webkit-linear-gradient(bottom left, var(--random-color-2), var(--random-color));
   background-image: -o-linear-gradient(bottom left, var(--random-color-2), var(--random-color));
