@@ -5,6 +5,10 @@
   --random-color-2: #f772ff;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   text-align: center;
   align-items: center;
@@ -17,7 +21,6 @@ body {
   );
   color: var(--primary);
   background-repeat: no-repeat;
-  height: 67.8vh;
 }
 
 h1:first-child {
