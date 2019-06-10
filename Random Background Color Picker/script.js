@@ -6,8 +6,8 @@ function randomColor() {
   generatedColor2 = Math.floor(Math.random() * 16777215).toString(16);
 
   if (
-    getContrastYIQ(generatedColor) === "black" &&
-    getContrastYIQ(generatedColor2) === "black"
+    getContras(generatedColor) === "black" &&
+    getContras(generatedColor2) === "black"
   )
     document.documentElement.style.setProperty(`--primary`, "black");
   else document.documentElement.style.setProperty(`--primary`, "white");
@@ -46,10 +46,11 @@ function copyColors() {
   alert("Color was successfully copied!");
 }
 
-function getContrastYIQ(hexcolor) {
-  var r = parseInt(hexcolor.substr(0, 2), 16);
-  var g = parseInt(hexcolor.substr(2, 2), 16);
-  var b = parseInt(hexcolor.substr(4, 2), 16);
-  var yiq = (r * 299 + g * 587 + b * 114) / 1000;
-  return yiq >= 128 ? "black" : "white";
+// It takes the hex value and compares it to the value halfway between
+// pure black and pure white. If the hex value is less than half, meaning it is
+// on the darker side of the spectrum, it returns white as the text color. If
+// the result is greater than half, it’s on the lighter side of the spectrum and returns black as the text value.
+
+function getContras(hexcolor) {
+  return parseInt(hexcolor, 16) > 0xffffff / 2 ? "black" : "white";
 }

@@ -1,0 +1,135 @@
+@import "_variables.scss";
+@import "https://fonts.googleapis.com/css?family=Quicksand";
+@import url("https://fonts.googleapis.com/css?family=Dancing Script");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,800");
+
+#second-section {
+  z-index: 1;
+  position: relative;
+  height: 180vh;
+  background-color: $light-yellow;
+  background-color: #fcf0ed;
+}
+.icon-space {
+  -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
+  height: 35em;
+  width: 100%;
+  display: flex;
+  position: relative;
+  top: -8.5em;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: $light-yellow;
+  background-image: linear-gradient(
+    60deg,
+    rgba(255, 0, 0, 0),
+    rgba(255, 0, 0, 0.32)
+  );
+  align-items: center;
+  justify-content: center;
+}
+.fas,
+.icon::before {
+  color: white;
+  font-size: 4.5em;
+}
+.icon-title {
+  font-size: 1.2em;
+  font-family: "Lato", bold;
+}
+.icon-text {
+  font-size: 0.8em;
+  font-family: $font;
+  line-height: 1.6;
+  margin: 0.1em;
+}
+.icon {
+  padding: 20px 20px;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.25),
+    0 0 4rem 0px rgba(100, 100, 100, 0.15);
+  border-radius: 50%;
+  width: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  height: 100px;
+  display: flex;
+  margin: 0.6em;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    30deg,
+    #e6d45a,
+    #edc059,
+    #efac5e,
+    #ea9a65,
+    #e18b6c,
+    #e1837f,
+    #d97f91
+  );
+}
+.icons {
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1),
+    0 0 4rem 0px rgba(100, 100, 100, 0.05);
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0.5em;
+  align-items: center;
+  height: 320px;
+  width: 250px;
+  margin: 1.1em 2.5em;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.about-title {
+  font-family: $font;
+  font-size: 1.8em;
+  margin-block-end: 0.4em;
+  text-align: center;
+  background-image: linear-gradient(
+    to right top,
+    #ffffff,
+    #e6d45a,
+    #edc059,
+    #efac5e,
+    #ea9a65,
+    #e18b6c,
+    #e1837f,
+    #d97f91,
+    #cb7fa2,
+    #b78bc1,
+    #9599d6,
+    #6ba7dc
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+// .about-container {
+//   display: inline;
+//   height: 100vh;
+//   width: auto;
+// }
+.about-container {
+  display: inline-block;
+  display: flex;
+  flex-direction: row;
+}
+.about-container h1 span {
+  display: flex;
+  flex-direction: row;
+  text-indent: 50px;
+  max-width: 40em;
+  text-align: center;
+  font-family: $font;
+  display: inline-block;
+  margin: 2em 4em;
+  font-size: 0.7em;
+  line-height: 2.2;
+}
+.about-container img {
+  display: flex;
+  // position: absolute;
+  // display: inline-block;
+
+  height: 25em;
+  width: 25em;
+}
