@@ -21,23 +21,6 @@
   font-family: $header-font;
   z-index: 5;
   user-select: none;
-  // background-image: linear-gradient(
-  //   to right top,
-  //   #ffffff,
-  //   #e6d45a,
-  //   #edc059,
-  //   #efac5e,
-  //   #ea9a65,
-  //   #e18b6c,
-  //   #e1837f,
-  //   #d97f91,
-  //   #cb7fa2,
-  //   #b78bc1,
-  //   #9599d6,
-  //   #6ba7dc
-  // );
-  // -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
   position: relative;
   text-align: center;
   text-shadow: 1px 0px 1px #e6d45a, 0px 1px 1px #edc059, 2px 1px 1px #efac5e,
@@ -45,40 +28,7 @@
     4px 3px 1px #d97f91, 3px 4px 1px #d97f91, 5px 4px 1px #b78bc1,
     4px 5px 1px #e18b6c, 6px 5px 1px #9599d6, 5px 6px 1px #e1837f,
     7px 6px 1px #b78bc1;
-  // text-shadow: 1px 0px 1px #e6d45a, 0px 1px 1px #edc059, 2px 1px 1px #efac5e,
-  // 1px 2px 1px #ea9a65, 3px 2px 1px #e18b6c, 2px 3px 1px #e1837f,
-  // 4px 3px 1px #d97f91, 3px 4px 1px #d97f91, 5px 4px 1px #b78bc1,
-  // 4px 5px 1px #e18b6c, 6px 5px 1px #9599d6, 5px 6px 1px #e1837f,
-  // 7px 6px 1px #b78bc1;
   color: white;
-}
-.sec1-title-shadow {
-  font-size: 9em;
-  font-family: $header-font;
-  top: -1.8em;
-  z-index: 1;
-  user-select: none;
-  // background-image: linear-gradient(
-  //   to left top,
-  //   #e6d45a,
-  //   #edc059,
-  //   #efac5e,
-  //   #ea9a65,
-  //   #e18b6c,
-  //   #e1837f,
-  //   #d97f91,
-  //   #cb7fa2,
-  //   #b78bc1,
-  //   #9599d6,
-  //   #6ba7dc,
-  //   #48b2d4
-  // );
-  // -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
-  // text-shadow: 0 9px 10px rgba(0, 0, 0, 0.325);
-  position: relative;
-  color: white;
-  text-align: center;
 }
 .cursor-text-container {
   font-weight: 400;
@@ -169,5 +119,4 @@
 
 .button:hover {
   letter-spacing: 13px;
-  // box-shadow: 0 5px 20px 0 rgba(0, 40, 120, 0.3);
 }
