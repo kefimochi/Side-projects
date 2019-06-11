@@ -103,6 +103,15 @@ section {
 // -----------Other screen sizes-------------------------
 // ------------------------------------------------------
 // ------------------------------------------------------
+@media screen and (max-width: 1180px) {
+  #second-section {
+    height: 235vh;
+  }
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 @media screen and (max-width: 1005px) {
   // -----------Second--------------------------------
   .icon-space {

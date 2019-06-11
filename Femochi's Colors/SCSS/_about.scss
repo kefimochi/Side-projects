@@ -6,9 +6,9 @@
 #second-section {
   z-index: 1;
   position: relative;
-  height: 149vh;
+  height: 154vh;
   background-color: $light-yellow;
-  background-color: #fcf0ed;
+  background-color: white;
 }
 .icon-space {
   -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
@@ -111,14 +111,15 @@
   text-indent: 50px;
   // max-width: 40em;
   text-align: center;
-  font-family: $font;
+  font-family: "Lato";
+  font-weight: 400;
   display: inline-block;
-  margin: 0 2em 0 2em;
+  margin: 0 4em 1.5em 4em;
   font-size: 0.7em;
-  line-height: 2.2;
+  line-height: 2.5;
 }
 .about-container {
-  border: 3px solid orange;
+  // border: 3px solid orange;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -129,8 +130,10 @@
   &__image {
     width: 45em;
     height: 40em;
-    margin: 0 1.5em 0 0;
+    margin: 0 1.5em 0 1.5em;
     float: right;
+    max-width: 100%;
+    // max-height: 30em;
   }
   &__text {
     display: inline;
