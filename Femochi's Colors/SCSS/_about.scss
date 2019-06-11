@@ -6,9 +6,7 @@
 #second-section {
   z-index: 1;
   position: relative;
-  height: 154vh;
-  background-color: $light-yellow;
-  background-color: white;
+  height: 74vh;
 }
 .icon-space {
   -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
@@ -81,8 +79,6 @@
   background-color: rgba(255, 255, 255, 0.3);
 }
 .about-title {
-  position: relative;
-  // bottom: 4em;
   font-family: $font;
   font-size: 2em;
   margin-block-end: 1.5em;
@@ -106,15 +102,11 @@
   -webkit-text-fill-color: transparent;
 }
 .about-container h1 span {
-  display: flex;
-  flex-direction: column;
   text-indent: 50px;
-  // max-width: 40em;
-  text-align: center;
   font-family: "Lato";
   font-weight: 400;
   display: inline-block;
-  margin: 0 4em 1.5em 4em;
+  margin: 0 4em 2em 4em;
   font-size: 0.7em;
   line-height: 2.5;
 }
@@ -126,16 +118,21 @@
   bottom: 8em;
   margin: 0;
   // padding: 2em 0 6em 0;
+  background-color: white;
+  // border-right: 20px solid $light-pink;
+  // border-left: 20px solid $light-pink;
 
   &__image {
     width: 45em;
     height: 40em;
-    margin: 0 1.5em 0 1.5em;
+    margin: 0 1.5em 1em 1.5em;
     float: right;
     max-width: 100%;
-    // max-height: 30em;
   }
   &__text {
     display: inline;
   }
+}
+.about-picture-text {
+  color: gray;
 }

@@ -105,11 +105,15 @@ section {
 // ------------------------------------------------------
 @media screen and (max-width: 1180px) {
   #second-section {
-    height: 235vh;
+    height: 143vh;
   }
   .about-container {
     flex-direction: column;
     align-items: center;
+    &__image {
+      height: auto;
+      margin: 0 1.5em 2.5em 1.5em;
+    }
   }
 }
 @media screen and (max-width: 1005px) {
@@ -118,7 +122,7 @@ section {
     height: 50em;
   }
   #second-section {
-    height: 200vh;
+    height: 160vh;
   }
 }
 
@@ -156,9 +160,6 @@ section {
     height: 78em;
     flex-direction: column;
   }
-  #second-section {
-    height: 300vh;
-  }
 }
 
 @media screen and (max-width: 540px) {
@@ -174,4 +175,10 @@ section {
     padding: 16px 4em;
   }
   // -----------Second--------------------------------
+  // #second-section {
+  //   height: 250vh;
+  // }
+  .about-container h1 span {
+    margin: 0 2em 2em 2em;
+  }
 }
