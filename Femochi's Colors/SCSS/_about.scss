@@ -6,7 +6,8 @@
 #second-section {
   z-index: 1;
   position: relative;
-  height: 74vh;
+  height: 73vh;
+  // bottom: 6em;
 }
 .icon-space {
   -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
@@ -25,6 +26,7 @@
   );
   align-items: center;
   justify-content: center;
+  z-index: 5;
 }
 .fas,
 .icon::before {
@@ -109,19 +111,20 @@
   margin: 0 4em 2em 4em;
   font-size: 0.7em;
   line-height: 2.5;
+  margin-block-end: 0;
 }
 .about-container {
   // border: 3px solid orange;
   display: flex;
   flex-direction: row;
   position: relative;
-  bottom: 8em;
-  margin: 0;
-  // padding: 2em 0 6em 0;
+  z-index: 1;
+  bottom: 17em;
+  padding: 7em 0 0 0;
   background-color: white;
-  // border-right: 20px solid #efac5e;
-  // border-left: 20px solid #efac5e;
-  // border-bottom: 20px solid #efac5e;
+  border-right: 20px solid #efa674;
+  border-left: 20px solid #eadd9a;
+  border-bottom: 10px solid #eadd9a;
 
   &__image {
     width: 45em;

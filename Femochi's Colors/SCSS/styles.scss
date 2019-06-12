@@ -15,7 +15,7 @@ body {
 
 // -----------Media Left Bar----------------------------
 .media-links {
-  z-index: 5;
+  z-index: 0;
   font-family: $font;
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0.8);
@@ -51,6 +51,7 @@ body {
       top: 8px;
       left: -150px;
       opacity: 0;
+      color: white;
       transition: opacity 0.5s ease-in-out;
       -moz-transition: opacity 0.5s ease-in-out;
       -webkit-transition: opacity 0.5s ease-in-out;
@@ -108,7 +109,7 @@ section {
   // -----------First--------------------------------
   .sec1-title {
     padding: 1.2em 0 0.5em 0;
-    font-size: 12em;
+    font-size: 10em;
     top: 0;
   }
   // -----------Second--------------------------------
@@ -120,12 +121,17 @@ section {
     align-items: center;
     &__image {
       height: auto;
-      margin: 0 1.5em 2.5em 1.5em;
+      margin: 0 1.5em 0 1.5em;
     }
   }
 }
 
 @media screen and (max-width: 1005px) {
+  // -----------First--------------------------------
+  .sec1-title {
+    padding: 1em 0 0.5em 0;
+    font-size: 9em;
+  }
   // -----------Second--------------------------------
   .icon-space {
     height: 50em;
@@ -159,8 +165,8 @@ section {
   }
   // -----------First--------------------------------
   .sec1-title {
-    padding: 0.9em 0 0.4em 0;
-    font-size: 10em;
+    padding: 0.6em 0 0.4em 0;
+    font-size: 9em;
     top: 0;
   }
   // -----------Second--------------------------------
@@ -168,6 +174,11 @@ section {
     -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
     height: 78em;
     flex-direction: column;
+  }
+  .about-container {
+    border-right: 6px solid #ecc98c;
+    border-left: 6px solid #eadd9a;
+    border-bottom: 6px solid #eadd9a;
   }
 }
 
@@ -197,12 +208,12 @@ section {
   .sec1-title {
     font-size: 5.3em;
     top: 0;
-    padding: 1em 0 0.6em 0;
+    padding: 1.6em 0 0.6em 0;
   }
 
   .button {
     z-index: 3;
-    padding: 16px 4em;
+    padding: 12px 2.5em;
   }
   // -----------Second--------------------------------
   // #second-section {
