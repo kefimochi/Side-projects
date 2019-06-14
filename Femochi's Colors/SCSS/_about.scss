@@ -6,11 +6,11 @@
 #second-section {
   z-index: 1;
   position: relative;
-  height: 73vh;
-  // bottom: 6em;
+  height: 68vh;
 }
 .icon-space {
   -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
   height: 35em;
   width: 100%;
   display: flex;

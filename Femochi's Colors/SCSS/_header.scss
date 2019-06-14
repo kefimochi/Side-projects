@@ -26,9 +26,8 @@
     #9599d6,
     #6ba7dc
   );
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: bolder;
 }
 .show {
   display: block !important;
