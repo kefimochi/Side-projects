@@ -1,0 +1,173 @@
+@import "https://fonts.googleapis.com/css?family=Quicksand";
+:root {
+  --primary: white;
+  --random-color: #2d1dba;
+  --random-color-2: #f772ff; }
+
+@-webkit-keyframes moveUpAndDown {
+  100%,
+  0% {
+    top: 0; }
+  50% {
+    top: 50px; } }
+
+@keyframes moveUpAndDown {
+  100%,
+  0% {
+    top: 0; }
+  50% {
+    top: 50px; } }
+
+@-webkit-keyframes moveDownAndUp {
+  100%,
+  0% {
+    top: 0; }
+  50% {
+    top: -100px; } }
+
+@keyframes moveDownAndUp {
+  100%,
+  0% {
+    top: 0; }
+  50% {
+    top: -100px; } }
+
+.float-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: no-wrap;
+  flex-wrap: no-wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 30%;
+  margin: 0 2.5%; }
+
+.float-container img {
+  width: 15%;
+  border-radius: 50%;
+  border: 5px solid white;
+  position: relative; }
+
+.float-container .plant1 {
+  margin-top: -70%;
+  -webkit-animation: moveUpAndDown 8s ease-out infinite;
+  animation: moveUpAndDown 8s ease-out infinite; }
+
+.float-container .plant2 {
+  margin-top: 30%;
+  -webkit-animation: moveDownAndUp 7s ease-out infinite;
+  animation: moveDownAndUp 7s ease-out infinite; }
+
+.float-container .plant3 {
+  margin-top: -40%;
+  -webkit-animation: moveDownAndUp 6s ease-out infinite;
+  animation: moveDownAndUp 6s ease-out infinite; }
+
+.float-container .plant4 {
+  margin-top: 70%;
+  -webkit-animation: moveDownAndUp 6s ease-out infinite;
+  animation: moveDownAndUp 6s ease-out infinite; }
+
+.float-container .plant5 {
+  margin-top: 40%;
+  -webkit-animation: moveDownAndUp 5s ease-out infinite;
+  animation: moveDownAndUp 5s ease-out infinite; }
+
+.float-container .plant6 {
+  margin-top: -20%;
+  -webkit-animation: moveDownAndUp 8s ease-out infinite;
+  animation: moveDownAndUp 8s ease-out infinite; }
+
+.float-container .plant7 {
+  margin-top: 50%;
+  -webkit-animation: moveUpAndDown 5s ease-out infinite;
+  animation: moveUpAndDown 5s ease-out infinite; }
+
+.float-container .plant8 {
+  margin-top: -70%;
+  -webkit-animation: moveUpAndDown 4s ease-out infinite;
+  animation: moveUpAndDown 4s ease-out infinite; }
+
+.text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 30%;
+  text-align: center; }
+
+html {
+  margin: 3em 0; }
+
+body {
+  font-family: Quicksand;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#4411b7), to(#2ecf9d));
+  background-image: -webkit-linear-gradient(bottom left, #4411b7, #2ecf9d);
+  background-image: -o-linear-gradient(bottom left, #4411b7, #2ecf9d);
+  background-image: linear-gradient(to top right, #4411b7, #2ecf9d);
+  color: white;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.title {
+  margin: 3em 0 1em 0; }
+
+.sub-text {
+  font-size: 1.1em;
+  margin: 0 0 1.5em 0;
+  /*   width:30%; */
+  line-height: 1.6; }
+
+.btn {
+  display: inline-block;
+  border-radius: 2px;
+  border: none;
+  height: 45px;
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 5em; }
+
+.sm {
+  width: 20em; }
+
+.ghost {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  -webkit-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease; }
+  .ghost:hover {
+    background-color: var(--primary);
+    color: var(--random-color);
+    -webkit-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease; }

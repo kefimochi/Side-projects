@@ -1,0 +1,147 @@
+@import "https://fonts.googleapis.com/css?family=Quicksand";
+:root {
+  --primary: white;
+  --random-color: #2d1dba;
+  --random-color-2: #f772ff;
+}
+
+@keyframes moveUpAndDown {
+  100%,
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 50px;
+  }
+}
+
+@keyframes moveDownAndUp {
+  100%,
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -100px;
+  }
+}
+
+.float-container {
+  display: flex;
+  flex-wrap: no-wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  margin: 0 2.5%;
+}
+
+.float-container img {
+  width: 15%;
+  // margin: .5em;
+  border-radius: 50%;
+  border: 5px solid white;
+  position: relative;
+}
+
+.float-container .plant1 {
+  margin-top: -70%;
+  animation: moveUpAndDown 8s ease-out infinite;
+}
+
+.float-container .plant2 {
+  margin-top: 30%;
+  animation: moveDownAndUp 7s ease-out infinite;
+}
+
+.float-container .plant3 {
+  margin-top: -40%;
+  animation: moveDownAndUp 6s ease-out infinite;
+}
+
+.float-container .plant4 {
+  margin-top: 70%;
+  animation: moveDownAndUp 6s ease-out infinite;
+}
+
+.float-container .plant5 {
+  margin-top: 40%;
+  animation: moveDownAndUp 5s ease-out infinite;
+}
+
+.float-container .plant6 {
+  margin-top: -20%;
+  animation: moveDownAndUp 8s ease-out infinite;
+}
+
+.float-container .plant7 {
+  margin-top: 50%;
+  animation: moveUpAndDown 5s ease-out infinite;
+}
+
+.float-container .plant8 {
+  margin-top: -70%;
+  animation: moveUpAndDown 4s ease-out infinite;
+}
+
+.text-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  text-align: center;
+}
+
+html {
+  margin: 3em 0;
+}
+
+body {
+  font-family: Quicksand;
+  background-image: linear-gradient(to top right, #4411b7, #2ecf9d);
+  color: white;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.title {
+  margin: 3em 0 1em 0;
+}
+
+.sub-text {
+  font-size: 1.1em;
+  margin: 0 0 1.5em 0;
+  // padding: 0 10em;
+  /*   width:30%; */
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 2px;
+  border: none;
+  height: 45px;
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 5em;
+}
+
+.sm {
+  width: 20em;
+}
+
+.ghost {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  transition: 0.2s ease;
+
+  &:hover {
+    background-color: var(--primary);
+    color: var(--random-color);
+    transition: 0.2s ease;
+  }
+}
