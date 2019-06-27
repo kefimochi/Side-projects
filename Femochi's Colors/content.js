@@ -1,3 +1,5 @@
+// document.designMode = "on";
+
 //-------------------Toggling Navigation---------------------//
 const navBar = document.querySelector(".nav-bar");
 const navLinks = document.querySelectorAll("a");
@@ -106,5 +108,3 @@ navLink.forEach(link =>
       smoothScroll("#fifth-section", 1500);
   })
 );
-
-console.log(window.scrollY);
