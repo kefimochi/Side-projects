@@ -14,10 +14,11 @@ plants.forEach(plant => {
 });
 
 function multiply(e) {
-  let container = document.querySelector(".float-container");
+  let container = document.querySelector(".float-container"); // Use to compare?
   console.log(e);
   console.log(e.fromElement.firstElementChild); // If first container than returns 'plant plant1', if second 'plant plant5'
-  console.log(e.firstElementChild);
+  // console.log(e.firstElementChild);
+  console.log(e.fromElement.firstElementChild.toString().includes("plant1"));
   hovered++;
   console.log(hovered);
   let img = document.createElement("img");
