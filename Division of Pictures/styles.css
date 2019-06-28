@@ -52,6 +52,7 @@
 
 .float-container img {
   width: 16%;
+  overflow: hidden;
   border-radius: 50%;
   border: 5px solid white;
   position: relative; }

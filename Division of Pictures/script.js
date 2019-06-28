@@ -13,28 +13,30 @@ plants.forEach(plant => {
 });
 
 function multiply(e) {
-  let container = document.querySelector(".float-container"); // Use to compare?
+  let plantClass = generateNum(1, 8);
   console.log(e);
-  console.log(e.fromElement.firstElementChild.classList.contains("plant1")); // If first container than returns 'plant plant1', if second 'plant plant5'
+
   let img = document.createElement("img");
   img.src = images[generateNum(0, 4)];
+  /*
+   * If an images was hovered in the first container, firstChildClass will return an image
+   * w/ 'plant plant1' classes, while if it is in the second container it will always
+   * return 'plant plant5'. Thus this functions checks if the hover event was
+   * triggered in what section, thus appending new element to that particular section
+   */
   if (e.fromElement.firstElementChild.classList.contains("plant1")) {
     document.getElementById("cont1").appendChild(img);
-    img.classList.add("plant1");
   } else if (e.fromElement.firstElementChild.classList.contains("plant5")) {
     document.getElementById("cont2").appendChild(img);
-    img.classList.add("plant8");
-  } else {
-    return;
-  }
+  } else return;
+
+  // Generates a random speed and behavior for the added element
+  img.classList.add("plant" + plantClass);
   img.classList.add("plant");
 
-  // Somehow checks which container is the parent.
   // In ideal world, the element would be creates right next to
   // the hovered one, yet a bit offsetted to the left or right(might be determined
   // on which container).
-
-  // .plant${1-8}, generate the number and assign the corresponding class
 }
 
 function generateNum(min, max) {
