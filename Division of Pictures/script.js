@@ -5,7 +5,6 @@ let images = [
   "https://planto-the-plant-watering-app.herokuapp.com/assets/plants/plant1.png",
   "https://planto-the-plant-watering-app.herokuapp.com/assets/plants/plant5.png"
 ];
-let hovered = 0;
 let keyFrames = ["moveUpAndDown", "moveDownAndUp"];
 
 const plants = document.querySelectorAll(".plant");
@@ -16,15 +15,18 @@ plants.forEach(plant => {
 function multiply(e) {
   let container = document.querySelector(".float-container"); // Use to compare?
   console.log(e);
-  console.log(e.fromElement.firstElementChild); // If first container than returns 'plant plant1', if second 'plant plant5'
-  // console.log(e.firstElementChild);
-  console.log(e.fromElement.firstElementChild.toString().includes("plant1"));
-  hovered++;
-  console.log(hovered);
+  console.log(e.fromElement.firstElementChild.classList.contains("plant1")); // If first container than returns 'plant plant1', if second 'plant plant5'
   let img = document.createElement("img");
   img.src = images[generateNum(0, 4)];
-  document.getElementById("cont1").appendChild(img);
-  img.classList.add("plant1");
+  if (e.fromElement.firstElementChild.classList.contains("plant1")) {
+    document.getElementById("cont1").appendChild(img);
+    img.classList.add("plant1");
+  } else if (e.fromElement.firstElementChild.classList.contains("plant5")) {
+    document.getElementById("cont2").appendChild(img);
+    img.classList.add("plant8");
+  } else {
+    return;
+  }
   img.classList.add("plant");
 
   // Somehow checks which container is the parent.
