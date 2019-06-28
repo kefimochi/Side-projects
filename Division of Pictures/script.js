@@ -2,21 +2,30 @@ let images = [
   "https://planto-the-plant-watering-app.herokuapp.com/assets/plants/plant1.png",
   "https://planto-the-plant-watering-app.herokuapp.com/assets/plants/plant2.png",
   "https://planto-the-plant-watering-app.herokuapp.com/assets/plants/plant3.png",
-  "https://planto-the-plant-watering-app.herokuapp.com/assets/plants/plant1.png"
+  "https://planto-the-plant-watering-app.herokuapp.com/assets/plants/plant1.png",
+  "https://planto-the-plant-watering-app.herokuapp.com/assets/plants/plant5.png"
 ];
-
+let hovered = 0;
 let keyFrames = ["moveUpAndDown", "moveDownAndUp"];
 
 const plants = document.querySelectorAll(".plant");
 plants.forEach(plant => {
-  plant.addEventListener("click", multiply());
+  plant.addEventListener("mouseover", multiply);
 });
 
-function multiply() {
-  console.log("Hovered");
+function multiply(e) {
+  let container = document.querySelector(".float-container");
+  console.log(e);
+  console.log(e.fromElement.firstElementChild); // If first container than returns 'plant plant1', if second 'plant plant5'
+  console.log(e.firstElementChild);
+  hovered++;
+  console.log(hovered);
   let img = document.createElement("img");
-  img.src = images[generateNum(0, 3)];
+  img.src = images[generateNum(0, 4)];
   document.getElementById("cont1").appendChild(img);
+  img.classList.add("plant1");
+  img.classList.add("plant");
+
   // Somehow checks which container is the parent.
   // In ideal world, the element would be creates right next to
   // the hovered one, yet a bit offsetted to the left or right(might be determined

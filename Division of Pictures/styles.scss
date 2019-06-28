@@ -1,8 +1,7 @@
 @import "https://fonts.googleapis.com/css?family=Quicksand";
 :root {
   --primary: white;
-  --random-color: #2d1dba;
-  --random-color-2: #f772ff;
+  --random-color: #4411b7;
 }
 
 @keyframes moveUpAndDown {
@@ -36,7 +35,7 @@
 }
 
 .float-container img {
-  width: 15%;
+  width: 16%;
   // margin: .5em;
   border-radius: 50%;
   border: 5px solid white;
