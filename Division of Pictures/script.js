@@ -13,6 +13,7 @@ plants.forEach(plant => {
 
 function multiply(e) {
   console.log(e);
+  console.log(e.fromElement.firstElementChild);
 
   let img = document.createElement("img");
   img.src = images[generateNum(0, 4)];
@@ -22,16 +23,28 @@ function multiply(e) {
    * return 'plant plant5'. Thus this functions checks if the hover event was
    * triggered in what section, thus appending new element to that particular section
    */
+  // .childElementCount
+
   if (e.fromElement.firstElementChild.classList.contains("plant1")) {
     // document.getElementById("cont1").appendChild(img);
     document
       .getElementById("cont1")
-      .insertBefore(img, document.getElementById("cont1").children[0]);
+      .insertBefore(
+        img,
+        document.getElementById("cont1").children[
+          generateNum(0, document.getElementById("cont1").childElementCount)
+        ]
+      );
   } else if (e.fromElement.firstElementChild.classList.contains("plant5")) {
     // document.getElementById("cont2").appendChild(img);
     document
       .getElementById("cont2")
-      .insertBefore(img, document.getElementById("cont2").children[0]);
+      .insertBefore(
+        img,
+        document.getElementById("cont2").children[
+          generateNum(0, document.getElementById("cont2").childElementCount)
+        ]
+      );
   } else return;
 
   // Generates a random speed and behavior for the added element
