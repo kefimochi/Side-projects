@@ -13,8 +13,6 @@ plants.forEach(plant => {
 
 function multiply(e) {
   console.log(e);
-  console.log(e.fromElement.firstElementChild);
-
   let img = document.createElement("img");
   img.src = images[generateNum(0, 4)];
 
@@ -23,19 +21,17 @@ function multiply(e) {
    * return 'plant plant5'. Thus this functions checks if the hover event was
    * triggered in what section, thus appending new element to that particular section
    */
-  // .childElementCount
-
   let cont1 = document.getElementById("cont1");
   let cont2 = document.getElementById("cont2");
 
+  // Inserts the image node at a random place inside container element
+  // Append Child does not allow insertion in a specific location
   if (e.fromElement.firstElementChild.classList.contains("plant1")) {
-    // document.getElementById("cont1").appendChild(img);
     cont1.insertBefore(
       img,
       cont1.children[generateNum(0, cont1.childElementCount)]
     );
   } else if (e.fromElement.firstElementChild.classList.contains("plant5")) {
-    // document.getElementById("cont2").appendChild(img);
     cont2.insertBefore(
       img,
       cont2.children[generateNum(0, cont2.childElementCount)]
