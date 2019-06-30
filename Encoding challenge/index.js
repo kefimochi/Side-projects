@@ -1,14 +1,8 @@
 function encode(num) {
-  let encodedNum = num + 8192;
-  //   encodedNum = encodedNum.toString(16); // Intermediate hex
-  let binary = encodedNum.toString(2);
-  console.log(binary);
-  let newNum = binary.splice(binary.length - 5, 0, 1);
-  console.log(newNum);
-  // Interprets given num as binary, thus 11 as input will result in 3
-  //   console.log("Testing binary: ", Number.parseInt(11, 2));
-  //   console.log("Testing binary 2: ", el.toString(2));
-  return encodedNum;
+  num = num + 8192;
+  let binary = num.toString(2);
+  let newNum = binary.splice(binary.length - 5, 0, 0);
+  return parseInt(newNum, 2).toString(16);
 }
 
 function decode(num) {
