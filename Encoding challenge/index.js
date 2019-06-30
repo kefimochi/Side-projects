@@ -1,8 +1,11 @@
 function encode(num) {
   num = num + 8192;
   let binary = num.toString(2);
-  let newNum = binary.splice(binary.length - 5, 0, 0);
-  return parseInt(newNum, 2).toString(16);
+
+  let newNum = parseInt(binary.splice(binary.length - 5, 0), 2).toString(16);
+  if (newNum === "0") newNum = "0000";
+
+  return newNum;
 }
 
 function decode(num) {
