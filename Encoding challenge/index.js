@@ -1,3 +1,5 @@
+const fs = require("fs");
+
 function encode(num) {
   if (-8192 > num || 8191 < num) return "Input outside 14-bit range.";
   // Adds '8192' and coverts to binary
@@ -69,8 +71,25 @@ String.prototype.splice = function(idx, rem) {
 console.log("Encoding 0 (should be 4000):", encode(0));
 console.log("Encoding -8192 (should be 0000):", encode(-8192));
 console.log("Encoding 2048 (should be 5000):", encode(2048));
+console.log("Encoding -4096 (should be 2000):", encode(-4096));
 
 // Test cases for decoding
 console.log("Decoding 40 00 (should be 0):", decode("40", "00"));
 console.log("Decoding 0A 05 (should be -6907):", decode("0A", "05"));
 console.log("Decoding 55 00 (should be 2688):", decode("55", "00"));
+console.log("Decoding 7F 7F (should be 8191):", decode("7F", "7F"));
+
+// Data which will write in a file.
+let data =
+  "Decoding 40 00 (should be 0):\t" +
+  decode("40", "00") +
+  "\nDecoding 0A 05 (should be -6907):\t" +
+  decode("0A", "05") +
+  "\nDecoding 55 00 (should be 2688):\t" +
+  decode("55", "00") +
+  "\nDecoding 7F 7F (should be 8191):\t" +
+  decode("7F", "7F");
+
+fs.writeFile("ConvertedData.txt", data, err => {
+  if (err) throw err;
+});

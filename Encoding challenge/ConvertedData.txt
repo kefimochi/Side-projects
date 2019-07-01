@@ -1,0 +1,4 @@
+Decoding 40 00 (should be 0):	0
+Decoding 0A 05 (should be -6907):	-6907
+Decoding 55 00 (should be 2688):	2688
+Decoding 7F 7F (should be 8191):	8191
