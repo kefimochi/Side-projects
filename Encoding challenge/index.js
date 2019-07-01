@@ -1,3 +1,4 @@
+// To run and compile, please enter "Node index.js" in the terminal
 const fs = require("fs");
 
 function encode(num) {
