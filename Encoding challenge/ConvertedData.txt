@@ -1,4 +1,12 @@
-Decoding 40 00 (should be 0):	0
-Decoding 0A 05 (should be -6907):	-6907
-Decoding 55 00 (should be 2688):	2688
-Decoding 7F 7F (should be 8191):	8191
+*******************************
+Encoding 6111:	6f5f
+Encoding 340:	4254
+Encoding -2628:	2b3c
+Encoding -255:	3e01
+Encoding 7550:	7a7e
+*******************************
+Decoding 0A 0A:	-6902
+Decoding 00 29:	-8151
+Decoding 3F 0F:	-113
+Decoding 5E 7F:	3967
+*******************************

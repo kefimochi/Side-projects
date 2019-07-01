@@ -6,7 +6,7 @@ function encode(num) {
   let binary = (num + 8192).toString(2);
 
   // Adds character '0' on the 8th place for the shift to happen.
-  let convertedNum = parseInt(binary.splice(binary.length - 8, 0), 2).toString(
+  let convertedNum = parseInt(binary.splice(binary.length - 7, 0), 2).toString(
     16
   );
   // Make it '0000' for the prettier notation
@@ -79,16 +79,28 @@ console.log("Decoding 0A 05 (should be -6907):", decode("0A", "05"));
 console.log("Decoding 55 00 (should be 2688):", decode("55", "00"));
 console.log("Decoding 7F 7F (should be 8191):", decode("7F", "7F"));
 
-// Data which will write in a file.
 let data =
-  "Decoding 40 00 (should be 0):\t" +
-  decode("40", "00") +
-  "\nDecoding 0A 05 (should be -6907):\t" +
-  decode("0A", "05") +
-  "\nDecoding 55 00 (should be 2688):\t" +
-  decode("55", "00") +
-  "\nDecoding 7F 7F (should be 8191):\t" +
-  decode("7F", "7F");
+  "*******************************" +
+  "\nEncoding 6111:\t" +
+  encode(6111) +
+  "\nEncoding 340:\t" +
+  encode(340) +
+  "\nEncoding -2628:\t" +
+  encode(-2628) +
+  "\nEncoding -255:\t" +
+  encode(-255) +
+  "\nEncoding 7550:\t" +
+  encode(7550) +
+  "\n*******************************" +
+  "\nDecoding 0A 0A:\t" +
+  decode("0A", "0A") +
+  "\nDecoding 00 29:\t" +
+  decode("00", "29") +
+  "\nDecoding 3F 0F:\t" +
+  decode("3F", "0F") +
+  "\nDecoding 5E 7F:\t" +
+  decode("5E", "7F") +
+  "\n*******************************";
 
 fs.writeFile("ConvertedData.txt", data, err => {
   if (err) throw err;
