@@ -1,28 +1,29 @@
 function encode(num) {
   if (-8192 > num || 8191 < num) return "Input outside 14-bit range.";
-  num = num + 8192;
-  let binary = num.toString(2);
+  // Adds '8192' and coverts to binary
+  let binary = (num + 8192).toString(2);
 
   // Adds character '0' on the 8th place for the shift to happen.
-  let newNum = parseInt(binary.splice(binary.length - 8, 0), 2).toString(16);
+  let convertedNum = parseInt(binary.splice(binary.length - 8, 0), 2).toString(
+    16
+  );
   // Make it '0000' for the prettier notation
-  if (newNum === "0") newNum = "0000";
-  return newNum;
+  if (convertedNum === "0") convertedNum = "0000";
+  return convertedNum;
 }
 
 function decode(byte1, byte2) {
+  // Joins two bytes and converts to binary
   let joined = byte1 + byte2;
-  console.log("Joined: ", joined);
-  joined = hexToBin(joined);
-  console.log("Binary joined", joined);
-  let str =
-    joined.substring(0, joined.length - 7) +
-    joined.substring(joined.length - 6, joined.length);
-  console.log("Joined string", str);
+  let binary = hexToBin(joined);
 
-  let decimal = parseInt(str, 2) - 8192;
-  console.log("Back to decimal", decimal);
-  return decimal;
+  // Takes out '0' on the 8th position in a binary number
+  let convertedNum =
+    binary.substring(0, binary.length - 8) +
+    binary.substring(binary.length - 7, binary.length);
+
+  // Converts back to decimal and substracts 8192
+  return parseInt(convertedNum, 2) - 8192;
 }
 
 function hexToBin(src) {
