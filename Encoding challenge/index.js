@@ -16,11 +16,12 @@ function decode(byte1, byte2) {
   joined = hexToBin(joined);
   console.log("Binary joined", joined);
   let str =
-    joined.substr(0, joined.length - 7) +
-    joined.substr(joined.length - 8, joined.length);
-  console.log;
+    joined.substring(0, joined.length - 7) +
+    joined.substring(joined.length - 6, joined.length);
+  console.log("Joined string", str);
 
   let decimal = parseInt(str, 2) - 8192;
+  console.log("Back to decimal", decimal);
   return decimal;
 }
 
