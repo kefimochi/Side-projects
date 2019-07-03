@@ -23,7 +23,7 @@ body {
   flex-direction: row; }
 
 .container {
-  height: 60vh;
+  height: 70vh;
   width: 110vh;
   background-color: #f2f3f5;
   display: -webkit-box;
@@ -48,9 +48,9 @@ body {
   background-size: cover; }
 
 .inner-container {
-  margin: 1.5em;
+  margin: 1.3em;
   width: 60vh;
-  height: 56vh;
+  height: 65vh;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
@@ -59,44 +59,82 @@ body {
 .title {
   text-transform: uppercase;
   text-align: center;
-  font-size: 1.6em; }
+  font-size: 1.6em;
+  border-bottom: 3px solid white; }
 
 .footer {
+  border-top: 2px solid white;
+  padding: 2em;
   text-align: center;
   font-size: 0.55em;
-  margin-top: 2em; }
+  margin-top: 9em; }
 
 .footer a {
   color: #517e92; }
 
-form p label {
-  font-size: 0.9em; }
+::-webkit-input-placeholder {
+  font-family: "Quicksand", sans-serif;
+  color: #616161; }
 
-form label {
-  padding: 5px 20px;
-  display: block;
-  margin: 0;
-  z-index: 1;
-  color: #999;
-  font-size: 18px;
-  line-height: 10px; }
+:-ms-input-placeholder {
+  font-family: "Quicksand", sans-serif;
+  color: #616161; }
 
-form p input {
+::-ms-input-placeholder {
+  font-family: "Quicksand", sans-serif;
+  color: #616161; }
+
+::placeholder {
+  font-family: "Quicksand", sans-serif;
+  color: #616161; }
+
+form {
+  margin-top: 3.6em; }
+
+form input {
   z-index: 2;
-  width: 100%;
-  height: 2em; }
+  height: 2em;
+  border: 0.9px solid #9bb8c4;
+  padding: 0.5em 1em;
+  margin-left: 0.8em; }
 
-form p textarea {
-  width: 100%;
-  height: 5em; }
+form textarea {
+  margin-top: 1em;
+  margin-left: 0.6em;
+  width: 52.5vh;
+  border: 0.9px solid #9bb8c4;
+  height: 9em;
+  resize: none;
+  padding: 1em 1.2em; }
 
 form button {
   float: right;
   margin: 2em; }
 
 input#submit {
+  float: right;
   background: none;
   border: none;
   font-size: 1em;
-  border: 2px #517e92;
-  color: #517e92; }
+  color: #517e92;
+  border: 2px solid #82a1ad;
+  border-radius: 1em;
+  margin: 0 1em;
+  width: 9em;
+  height: 2.7em;
+  font-size: 0.8em;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
+
+input#submit:hover {
+  color: white;
+  background-color: #82a1ad; }
+
+form p input:focus {
+  outline: none;
+  border: 1px solid #517e92; }
+
+form textarea:focus {
+  outline: none;
+  border: 1px solid #517e92; }
