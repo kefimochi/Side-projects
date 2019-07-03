@@ -12,37 +12,51 @@
       integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
       crossorigin="anonymous"
     />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
   </header>
 
-
-  <!-- input block
-input control -->
   <body>
     <div class="container">
       <img class="picture" src="/abstract-picture.jpg" alt="Abstract picture" />
       <div class="inner-container">
         <h1 class="title">Contact Us</h1>
-        <form>
-                <p>
-                    <input type="text" name="name" placeholder="Full Name">
-                    <input type="email" name="email" placeholder="Email">
-                </p>
-                <p>
-                    <textarea name="message" rows="5" placeholder="Message"></textarea>
-                    <p>
-                        <input type="submit" name="submit" value="SUBMIT" id="submit" onclick="myFunction()">
-                    </p>
-                </p>
-            </form>
-            <h1 class="footer">Made with extreme 💖 by <a href="https://twitter.com/kefimochi">
-                    Kate Efimova
-                </a></h1>
+        <form id="form" method="post" action="/">
+          <p>
+            <input type="text" name="name" placeholder="Full Name" />
+            <input type="text" name="email" placeholder="Email" />
+          </p>
+          <p>
+            <textarea name="message" rows="5" placeholder="Message"></textarea>
+          </p>
+
+          <p>
+            <input type="submit" name="submit" value="SUBMIT" id="submit" />
+          </p>
+        </form>
+        <h1 class="footer">
+          Made with love by
+          <a href="https://twitter.com/kefimochi">
+            Kate Efimova
+          </a>
+        </h1>
       </div>
     </div>
     <script src="../script.js"></script>
-    <script
-      type="text/JavaScript"
-      src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"
-    ></script>
+    <script type="text/javascript">
+      $(function() {
+        $("#submit").click(function(e) {
+          e.preventDefault(); // Stops the page from refreshing
+
+          let serverData = $("#form").serializeArray();
+          $.post("/", serverData);
+
+          alert("Sent!");
+        });
+      });
+    </script>
   </body>
 </html>
