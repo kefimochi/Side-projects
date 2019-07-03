@@ -25,13 +25,10 @@ body {
 .container {
   height: 60vh;
   width: 90vh;
-  background-color: azure;
+  background-color: #f2f3f5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -42,4 +39,15 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  text-align: center; }
+  text-align: center;
+  -webkit-box-shadow: 0 30px 40px -15px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 30px 40px -15px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  border: 5px solid white; }
+
+.picture {
+  height: 70vh;
+  opacity: 0.8;
+  border-right: 3px solid white;
+  width: 45%;
+  float: left; }
