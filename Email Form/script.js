@@ -1,3 +1,4 @@
+const MongoClient = require("mongodb").MongoClient;
 const express = require("express");
 const bodyParser = require("body-parser");
 const fs = require("fs");
@@ -28,6 +29,20 @@ app.post("/", (req, res) => {
   });
   fs.appendFile("database.txt", "****************\n", err => {
     if (err) throw Error;
+  });
+
+  MongoClient.connect("mongodb://localhost:27017/", function(err, db) {
+    let dbo = db.db("contacts").insertOne(
+      {
+        name: req.body.name,
+        email: req.body.email,
+        message: req.body.message
+      },
+      function(err, res) {
+        console.log("Inserted " + res.insertedCount + " document.");
+        db.close();
+      }
+    );
   });
 });
 
