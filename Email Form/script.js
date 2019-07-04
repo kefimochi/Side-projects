@@ -17,14 +17,18 @@ app.post("/", (req, res) => {
     "Your name is " + req.body.name + " and your email is " + req.body.email
   );
 
-  fs.appendFile(
-    "database.txt",
-    "name: " + req.body.name,
-    "email" + req.body.email
-  ),
-    err => {
-      if (err) throw Error;
-    };
+  fs.appendFile("database.txt", "name: " + req.body.name + "\n", err => {
+    if (err) throw Error;
+  });
+  fs.appendFile("database.txt", "email: " + req.body.email + "\n", err => {
+    if (err) throw Error;
+  });
+  fs.appendFile("database.txt", "message: " + req.body.message + "\n", err => {
+    if (err) throw Error;
+  });
+  fs.appendFile("database.txt", "****************\n", err => {
+    if (err) throw Error;
+  });
 });
 
 let options = {

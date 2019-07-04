@@ -21,7 +21,7 @@
 
   <body>
     <div class="container">
-      <img class="picture" src="/abstract-picture.jpg" alt="Abstract picture" />
+      <img class="picture" src="abstract-picture.jpg" alt="Abstract picture" />
       <div class="inner-container">
         <h1 class="title">Contact Us</h1>
         <form id="form" method="post" action="/">
@@ -47,16 +47,21 @@
     </div>
     <script src="../script.js"></script>
     <script type="text/javascript">
-      $(function() {
-        $("#submit").click(function(e) {
-          e.preventDefault(); // Stops the page from refreshing
+      (function() {
+        document.querySelector("#frm").addEventListener("submit", function(e) {
+          e.preventDefault(); // Stop page refresh.
 
-          let serverData = $("#form").serializeArray();
-          $.post("/", serverData);
+          var form = document.querySelector("#frm");
+          var data = new URLSearchParams(new FormData(form));
+
+          fetch("/", {
+            method: "post",
+            body: data
+          });
 
           alert("Sent!");
         });
-      });
+      })();
     </script>
   </body>
 </html>
