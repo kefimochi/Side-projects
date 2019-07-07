@@ -26,11 +26,16 @@
         <h1 class="title">Contact Us</h1>
         <form id="form" method="post" action="/">
           <p>
-            <input type="text" name="name" placeholder="Full Name" />
-            <input type="text" name="email" placeholder="Email" />
+            <input required type="text" name="name" placeholder="Full Name" />
+            <input required type="text" name="email" placeholder="Email" />
           </p>
           <p>
-            <textarea name="message" rows="5" placeholder="Message"></textarea>
+            <textarea
+              required
+              name="message"
+              rows="5"
+              placeholder="Message"
+            ></textarea>
           </p>
 
           <p>
