@@ -13,7 +13,13 @@ app.use(
   })
 );
 
+app.set("view options", { layout: false });
+app.engine("html", require("ejs").renderFile);
+
 app.post("/", (req, res) => {
+  // This renders a new html page
+  res.render("done.html");
+
   res.send(
     "Your name is " + req.body.name + " and your email is " + req.body.email
   );
