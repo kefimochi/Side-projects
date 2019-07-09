@@ -24,7 +24,12 @@
       <img class="picture" src="/abstract-picture.jpg" alt="Abstract picture" />
       <div class="inner-container">
         <h1 class="title">Contact Us</h1>
-        <form id="form" method="post" action="/">
+        <form
+          id="form"
+          method="post"
+          action="/"
+          onsubmit="return validateForm()"
+        >
           <p>
             <input required type="text" name="name" placeholder="Full Name" />
             <input required type="text" name="email" placeholder="Email" />
@@ -50,23 +55,7 @@
         </h1>
       </div>
     </div>
-    <script src="../script.js"></script>
-    <script type="text/javascript">
-      (function() {
-        document.querySelector("#frm").addEventListener("submit", function(e) {
-          e.preventDefault(); // Stop page refresh.
-
-          var form = document.querySelector("#frm");
-          var data = new URLSearchParams(new FormData(form));
-
-          fetch("/", {
-            method: "post",
-            body: data
-          });
-
-          alert("Sent!");
-        });
-      })();
-    </script>
+    <script src="index.js"></script>
+    <!-- <script src="../script.js"></script> -->
   </body>
 </html>
