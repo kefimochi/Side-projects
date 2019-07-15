@@ -102,3 +102,29 @@ var x = 100;
 - var y = 200;
 + var y = 400;
 ```
+
+-----
+
+## Tables!
+
+Centrally alligned, aligned to the right.
+
+| Dog's Name | Dog's Age |
+| :--------: | --------: |
+|  Snickers  |         2 |
+|  Prudence  |         8 |
+
+Aligned to the left, centrally alligned
+
+| Dog's Name | Dog's Age |
+| :--------- | :-------: |
+| Snickers   |     2     |
+| Prudence   |     8     |
+
+-----
+
+## Checkboxes
+
+* [x] Get Milk
+* [ ] Crack Eggs
+* [x] Cook Bacon
