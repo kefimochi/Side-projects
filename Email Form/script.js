@@ -20,9 +20,9 @@ app.post("/", (req, res) => {
   // This renders a new html page
   res.render("done.html");
 
-  res.send(
-    "Your name is " + req.body.name + " and your email is " + req.body.email
-  );
+  //   res.send(
+  //     "Your name is " + req.body.name + " and your email is " + req.body.email
+  //   );
 
   //   fs.appendFile("database.txt", "name: " + req.body.name + "\n", err => {
   //     if (err) throw Error;
