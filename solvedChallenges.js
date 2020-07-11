@@ -119,3 +119,113 @@ function repeatedString(s, n) {
     }
     return counter;
 }
+
+
+// **********************
+// Given a one dimensional array of data write a function that returns a new array
+// with the data reversed. Don't just use the reverse function that is built into your environment.
+// **********************
+
+const sampleData = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const reverseData = (data) => {
+  let reversedArr = [];
+  for (let i = data.length - 1; i >= 0; i--) {
+    reversedArr.push(data[i]);
+  }
+  return reversedArr;
+};
+
+console.log(reverseData(sampleData));
+
+// **********************
+// Write a quick and dirty program (not just a standalone function) to print a count
+// of all the different "words" in a text file. Use any definition of word that makes
+// logical sense or makes your job easy.
+// **********************
+
+const fs = require("fs");
+
+fs.readFile("sample.txt", (err, data) => {
+  if (err) throw err;
+  printResults(getWordCount(data.toString()));
+});
+
+const getWordCount = (data) => {
+  const splitText = data.split(" ");
+  const countedWords = {};
+
+  for (let i = 0; i < splitText.length; i++) {
+    splitText[i] = checkEndPunctuation(splitText[i]);
+    calculateNumberOfWords(countedWords, splitText[i].toLowerCase());
+  }
+
+  return filterWordsByAmount(countedWords);
+};
+
+// Removes any punctuation from the end of a string
+const checkEndPunctuation = (str) => {
+  const lastChar = str.charAt(str.length - 1);
+
+  if (
+    lastChar === "." ||
+    lastChar === "," ||
+    lastChar === "!" ||
+    lastChar === "?"
+  ) {
+    return spliceSplit(str, str.length - 1, 1);
+  }
+  return str;
+};
+
+// Removes 'count' number of letters from a string, starting at 'index'
+const spliceSplit = (str, index, count) => {
+  var ar = str.split("");
+  ar.splice(index, count);
+  return ar.join("");
+};
+
+// Edits the 'countedWords' object that was passed by reference.
+const calculateNumberOfWords = (countedWords, word) => {
+  if (!countedWords[word]) countedWords[word] = 1;
+  else countedWords[word] = countedWords[word] + 1;
+};
+
+const filterWordsByAmount = (words) => {
+  let restructuredWords = [];
+  dataKeys = Object.keys(words);
+
+  for (let i = 0; i < dataKeys.length; i++) {
+    restructuredWords.push({ word: dataKeys[i], count: words[dataKeys[i]] });
+  }
+
+  restructuredWords = sortByCount(restructuredWords);
+
+  return restructuredWords;
+};
+
+const sortByCount = (words) => {
+  return words.sort((a, b) => (a.count < b.count ? 1 : -1));
+};
+
+const printResults = (resultData) => {
+  const text = ["\n\nFor this input file, the word: \n\n"];
+  for (let i = 0; i < resultData.length; i++) {
+    text.push(
+      `"${resultData[i].word}" occurred ${resultData[i].count} ${
+        resultData[i].count === 1 ? "time" : "times"
+      } \n`
+    );
+  }
+  console.log(text.join(""));
+};
+
+// **********************
+// Write a function that returns M random non-negative integers less than some value N. Each integer must also be unique.
+// **********************
+
+const generateIntegers = (givenNumber) => {
+  return Math.floor(Math.random() * Math.floor(givenNumber));
+};
+
+console.log("Generated number: ", generateIntegers(36));
